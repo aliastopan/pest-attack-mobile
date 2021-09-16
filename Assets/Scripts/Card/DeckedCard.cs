@@ -35,6 +35,19 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if(draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
+            PlayerData.AvailableGrids == 1)
+        {
+            Debug.Log($"Drop Available.");
+            Instantiate(draggableInstance.GetComponent<DraggableCard>().TheCardItself, 
+                draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform);
+        }
+        else
+        {
+            Debug.Log($"Unable to Drop.");
+        }
 
+
+        Destroy(draggableInstance);
     }
 }
