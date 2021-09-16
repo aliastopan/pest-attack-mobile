@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grid
   - Card
+  - Padi
   layers:
   - Default
   - TransparentFX
