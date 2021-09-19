@@ -8,4 +8,5 @@ public class Debugger : MonoBehaviour
     {
         Debug.Log($"Available Grid: {PlayerData.AvailableGrids}");
     }
+
 }

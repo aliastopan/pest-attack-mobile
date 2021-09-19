@@ -29,31 +29,22 @@ public class CoinSpawner : MonoBehaviour
 
     IEnumerator CoinSpawn()
     {
-      //while(true)
-      //{
-        yield return new WaitForSeconds(SpawnTimeFactor);
+        while(true)
+        {
+            yield return new WaitForSeconds(SpawnTimeFactor);
 
-          //int rngSpawn = new System.Random().Next(0, 5);
-          int rngGrid = new System.Random().Next(0, 4);
-          int rngIndex = new System.Random().Next(0, 8);
+            int rngGrid = new System.Random().Next(0, 4);
+            int rngIndex = new System.Random().Next(0, 8);
 
-          //int spawnPointIndex = ((rngSpawn + 1) * (rngGrid + 1) - 1);
-          GameObject spawnPoint = SpawningGrids[rngGrid][rngIndex];
-          Debug.Log($"Spawn Point: {rngGrid}, {rngIndex}: {spawnPoint.name}, {spawnPoint.transform.position}");
+            GameObject spawnPoint = SpawningGrids[rngGrid][rngIndex];
+            Debug.Log($"Spawn Point: {rngGrid}, {rngIndex}: {spawnPoint.name}, {spawnPoint.transform.position}");
 
             if(spawnPoint.transform.childCount == 0)
             {
                 GameObject coinInstance = Instantiate(Coin, spawnPoint.transform);
-
-              //Instantiate(Coin, ObjectMaster.Instance.Camera.ScreenToWorldPoint(spawnPoint.transform.position));
-             
-              //GameObject spawn = Instantiate(Coin, spawnPoint.transform);
-              //Vector3 fixedPosition = ObjectMaster.Instance.Camera.ScreenToWorldPoint(spawnPoint.transform.position);
-              //fixedPosition.z = 0f;
-              //spawn.transform.position = fixedPosition;
             }
 
-      //}
+      }
     }
 
 
