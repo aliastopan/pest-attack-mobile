@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DraggableCard : MonoBehaviour
 {
     public GameObject AvailableGrid;
-    public GameObject TheCardItself;
+    public GameObject TrapCard;
     public Color DefaultColor;
     public Color ToDropColor;
 

@@ -22,7 +22,8 @@ public class CardContainer : MonoBehaviour
         if(collision.gameObject.tag == "Card")
         {
             this.GetComponent<Image>().color = DefaultColor;
-            PlayerData.AvailableGrids--; 
+            PlayerData.AvailableGrids--;
+            //PlayerData.AvailableGrids = PlayerData.AvailableGrids - 1 < 0 ? PlayerData.AvailableGrids = 0 : PlayerData.AvailableGrids--; 
             collision.gameObject.GetComponent<DraggableCard>().AvailableGrid = null;
             
         }

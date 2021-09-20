@@ -17,8 +17,8 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     
     private void Update()
     {
-       // Debug.Log($"Input: {ObjectMaster.Instance.Camera.ScreenToWorldPoint(Input.mousePosition)}");
-    }
+        if(PlayerData.AvailableGrids < 0)
+            PlayerData.AvailableGrids = 0;    }
 
 
     public void OnDrag(PointerEventData eventData)
@@ -39,8 +39,9 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
             PlayerData.AvailableGrids == 1)
         {
             Debug.Log($"Drop Available.");
-            Instantiate(draggableInstance.GetComponent<DraggableCard>().TheCardItself, 
+            Instantiate(draggableInstance.GetComponent<DraggableCard>().TrapCard, 
                 draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform);
+
         }
         else
         {
