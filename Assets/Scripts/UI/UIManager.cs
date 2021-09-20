@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        collectableText.text = $"{collectable}";
-        lifePointText.text = $"{lifePoint}";        
+        collectableText.text = $"{PlayerData.CurrencyPoint}";
+        lifePointText.text = $"{PlayerData.LifePoint}";        
     }
 }

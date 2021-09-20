@@ -23,24 +23,33 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector3 pointerPosition = ObjectMaster.Instance.Camera.ScreenToWorldPoint(Input.mousePosition);
-        pointerPosition.z = 0f;
-        draggableInstance.transform.position = pointerPosition;
+        if(PlayerData.CurrencyPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
+        {
+            Vector3 pointerPosition = ObjectMaster.Instance.Camera.ScreenToWorldPoint(Input.mousePosition);
+            pointerPosition.z = 0f;
+            draggableInstance.transform.position = pointerPosition;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        draggableInstance = Instantiate(DraggableCard, this.transform);
+        if(PlayerData.CurrencyPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
+            draggableInstance = Instantiate(DraggableCard, this.transform);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
-            PlayerData.AvailableGrids == 1)
+        int cost = (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost;
+        
+        //draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
+        if(PlayerData.AvailableGrids == 1 && PlayerData.CurrencyPoint >= cost)
         {
             Debug.Log($"Drop Available.");
             Instantiate(draggableInstance.GetComponent<DraggableCard>().TrapCard, 
                 draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform);
+
+            PlayerData.CurrencyPoint -= cost;
+            Destroy(draggableInstance);
 
         }
         else
@@ -49,6 +58,5 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         }
 
 
-        Destroy(draggableInstance);
     }
 }

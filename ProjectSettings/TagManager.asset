@@ -8,6 +8,7 @@ TagManager:
   - Card
   - Padi
   - Trap
+  - Enemy
   layers:
   - Default
   - TransparentFX

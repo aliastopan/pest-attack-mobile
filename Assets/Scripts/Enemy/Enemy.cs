@@ -12,18 +12,25 @@ public class Enemy : MonoBehaviour
     public float SpeedFactor = 1f;
     public bool IsBattle = false;
 
-    
-
-
-    // Start is called before the first frame update
-    void Start()
+    public GameObject Target;
+    private Trap trap;
+  public virtual void Move()
+  {
+    if (Target == null)
     {
-        
+      transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
     }
-
-    // Update is called once per frame
-    void Update()
+    else
     {
-        
+      try{
+        trap = Target.GetComponent<Trap>();
+        transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.DebuffSpeed)) * Time.deltaTime);
+
+        Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
+
+      }catch(System.Exception e){
+        Debug.LogWarning(e);
+      }
     }
+  }
 }
