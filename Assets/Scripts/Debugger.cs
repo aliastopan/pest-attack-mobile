@@ -6,7 +6,7 @@ public class Debugger : MonoBehaviour
 {
     private void Update()
     {
-        Debug.Log($"Available Grid: {PlayerData.AvailableGrids}");
+       // Debug.Log($"Available Grid: {PlayerData.AvailableGrids}");
 
     }
 

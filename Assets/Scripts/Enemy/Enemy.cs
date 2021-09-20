@@ -33,4 +33,39 @@ public class Enemy : MonoBehaviour
       }
     }
   }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        StartCoroutine(Attack(collision));
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Target = null;
+        trap = null;
+    }
+
+  IEnumerator Attack(Collider2D collision)
+  {
+    if(collision.gameObject.CompareTag("Padi"))
+    {
+      //Debug.Log("Attacking Padi....");
+
+      //Target = collision.gameObject;
+      //yield return new WaitForSeconds(AttackCooldown);
+      //collision.gameObject.GetComponent<RiceDefense>().OnDamaged(AttackPoint);
+    }
+
+    if(collision.gameObject.CompareTag("Trap"))
+    {
+      Debug.Log("Attacking Trap....");
+
+      Target = collision.gameObject;
+      yield return new WaitForSeconds(AttackCooldown);
+    }
+
+  }
+
+
 }

@@ -37,7 +37,7 @@ public class CoinSpawner : MonoBehaviour
             int rngIndex = new System.Random().Next(0, 8);
 
             GameObject spawnPoint = SpawningGrids[rngGrid][rngIndex];
-            Debug.Log($"Spawn Point: {rngGrid}, {rngIndex}: {spawnPoint.name}, {spawnPoint.transform.position}");
+            //Debug.Log($"Spawn Point: {rngGrid}, {rngIndex}: {spawnPoint.name}, {spawnPoint.transform.position}");
 
             if(spawnPoint.transform.childCount == 0)
             {
