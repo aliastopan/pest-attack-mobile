@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ObjectMaster : MonoBehaviour
 {
+    public Color DefaultColor;
+    public Color ToDropColor;
+
     public static ObjectMaster Instance;
 
     public Canvas Canvas;
@@ -13,6 +16,15 @@ public class ObjectMaster : MonoBehaviour
     {
         if(Instance == null)
             Instance = this;
+
+        //DefaultColor = ObjectMaster.Instance.DefaultColor;
+        //ToDropColor = ObjectMaster.Instance.ToDropColor;  
+    }
+
+    private void Update() 
+    {
+        //DefaultColor = ObjectMaster.Instance.DefaultColor;
+        //ToDropColor = ObjectMaster.Instance.ToDropColor;    
     }
 
 }

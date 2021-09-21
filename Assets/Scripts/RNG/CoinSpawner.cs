@@ -33,8 +33,8 @@ public class CoinSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(SpawnTimeFactor);
 
-            int rngGrid = new System.Random().Next(0, 4);
-            int rngIndex = new System.Random().Next(0, 8);
+            int rngGrid = new System.Random().Next(0, 4);   // column -> A,B,C ...
+            int rngIndex = new System.Random().Next(0, 8);  // row
 
             GameObject spawnPoint = SpawningGrids[rngGrid][rngIndex];
             //Debug.Log($"Spawn Point: {rngGrid}, {rngIndex}: {spawnPoint.name}, {spawnPoint.transform.position}");

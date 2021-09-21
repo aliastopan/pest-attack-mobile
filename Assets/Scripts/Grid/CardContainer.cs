@@ -7,6 +7,13 @@ public class CardContainer : MonoBehaviour
 {
     public Color DefaultColor;
     public Color ToDropColor;
+
+    private void Update() 
+    {
+        DefaultColor = ObjectMaster.Instance.DefaultColor;
+        ToDropColor = ObjectMaster.Instance.ToDropColor;    
+    }
+
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
         if(collision.gameObject.tag == "Card" && this.transform.childCount == 0)

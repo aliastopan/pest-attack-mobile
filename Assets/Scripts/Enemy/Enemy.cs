@@ -52,9 +52,9 @@ public class Enemy : MonoBehaviour
     {
       //Debug.Log("Attacking Padi....");
 
-      //Target = collision.gameObject;
-      //yield return new WaitForSeconds(AttackCooldown);
-      //collision.gameObject.GetComponent<RiceDefense>().OnDamaged(AttackPoint);
+      Target = collision.gameObject;
+      yield return new WaitForSeconds(AttackCooldown);
+      collision.gameObject.GetComponent<Rice>().OnDamaged(AttackPoint);
     }
 
     if(collision.gameObject.CompareTag("Trap"))

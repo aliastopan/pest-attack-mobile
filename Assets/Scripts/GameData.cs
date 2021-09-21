@@ -11,6 +11,12 @@ public static class GameData
   public static readonly int STAGE_4_MAX_ENEMY = 22;
   public static readonly int STAGE_5_MAX_ENEMY = 25;
 
+  public static int Rank_AirSabun = 1;
+  public static int Rank_Jaring = 1;
+  public static int Rank_Plastik = 1;
+
+
+
   public static int currentEnemy = 0;
 
 
