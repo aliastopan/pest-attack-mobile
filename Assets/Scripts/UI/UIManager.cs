@@ -11,6 +11,11 @@ public class UIManager : MonoBehaviour
     public static int lifePoint;
 
     public Image ShopScreen;
+
+    public Text RankAirSabunText;
+    public Text RankJaringText;
+    public Text RankPlastikText;
+    
     
 
     // Start is called before the first frame update
@@ -24,7 +29,12 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         collectableText.text = $"{PlayerData.CurrencyPoint}";
-        lifePointText.text = $"{PlayerData.LifePoint}";        
+        lifePointText.text = $"{PlayerData.LifePoint}";     
+
+        RankAirSabunText.text = $"Rank {GameData.Rank_AirSabun}";
+        RankJaringText.text = $"Rank {GameData.Rank_Jaring}";   
+        RankPlastikText.text = $"Rank {GameData.Rank_Plastik}";   
+
     }
 
 
@@ -34,6 +44,11 @@ public class UIManager : MonoBehaviour
         ShopScreen.gameObject.SetActive(true);
     }
 
+    public void CloseShop()
+    {
+        Time.timeScale = 1;
+        ShopScreen.gameObject.SetActive(false);
+    }
 
     public void PauseGame()
     {
