@@ -6,13 +6,22 @@ using UnityEngine.UI;
 
 public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
+    public CardName CardName;
+    public Sprite[] CardRank = new Sprite[3];
+
     private ObjectMaster objectMaster;
     private GameObject draggableInstance;
     public GameObject DraggableCard;
 
     private void Start()
     {
+        Debug.Log($"Card Name: {CardName}, {(int) CardName}");
         objectMaster = ObjectMaster.Instance;
+        this.gameObject.GetComponent<Image>().sprite = 
+            CardRank[GameData.TrapRank[(int) ObjectMaster.Instance.DeckSlot[(int) CardName]]];
+            //GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[0]]
+
+        
     }
     
     private void Update()

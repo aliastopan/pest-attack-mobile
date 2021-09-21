@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectMaster : MonoBehaviour
 {
+    public CardName[] DeckSlot = new CardName[6]; 
     public Color DefaultColor;
     public Color ToDropColor;
 

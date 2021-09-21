@@ -1620,6 +1620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardName: 1
+  CardRank:
+  - {fileID: 21300000, guid: d3449ba3291acc343a554601d023c3c1, type: 3}
+  - {fileID: 21300000, guid: a1363d2f6cab7fe40917985c50ec8bb5, type: 3}
+  - {fileID: 21300000, guid: 719526229f1a34147a2437d3fc126cad, type: 3}
   DraggableCard: {fileID: 3491142214911553788, guid: 6c1da5037fdd8bd48a3759710000f6b0, type: 3}
 --- !u!1 &387331039
 GameObject:
@@ -1856,6 +1861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded662e5180c796408c3f2748f2068c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeckSlot: 010000000200000003000000040000000500000006000000
   DefaultColor: {r: 1, g: 1, b: 1, a: 0}
   ToDropColor: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
   Canvas: {fileID: 990403027}
@@ -1885,7 +1891,7 @@ GameObject:
   - component: {fileID: 457598470}
   - component: {fileID: 457598469}
   m_Layer: 5
-  m_Name: Close
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4685,7 +4691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016632944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5867,6 +5873,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardName: 3
+  CardRank:
+  - {fileID: 21300000, guid: e4142fad8b461b64685eb04071af9c2e, type: 3}
+  - {fileID: 21300000, guid: c424195c39e36c749ba8b235b5087d77, type: 3}
+  - {fileID: 21300000, guid: 46d2fe42b3f72624c8ad0c02a4451542, type: 3}
   DraggableCard: {fileID: 3491142214911553788, guid: 6c1da5037fdd8bd48a3759710000f6b0, type: 3}
 --- !u!114 &1233583429
 MonoBehaviour:
@@ -6268,7 +6279,7 @@ GameObject:
   - component: {fileID: 1346441426}
   - component: {fileID: 1346441425}
   m_Layer: 5
-  m_Name: Shop
+  m_Name: ShopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6341,7 +6352,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 260045453}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: PauseGame
+        m_MethodName: OpenShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6862,6 +6873,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardName: 2
+  CardRank:
+  - {fileID: 21300000, guid: 979271c165f42f441b08ec2eb277f7f8, type: 3}
+  - {fileID: 21300000, guid: 816831f63356c3947a40ca7b794c70d5, type: 3}
+  - {fileID: 21300000, guid: 922ba09104afc3c43864eed25f11d496, type: 3}
   DraggableCard: {fileID: 3491142214911553788, guid: 6c1da5037fdd8bd48a3759710000f6b0, type: 3}
 --- !u!114 &1402392748
 MonoBehaviour:

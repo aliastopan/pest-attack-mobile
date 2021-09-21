@@ -31,9 +31,9 @@ public class UIManager : MonoBehaviour
         collectableText.text = $"{PlayerData.CurrencyPoint}";
         lifePointText.text = $"{PlayerData.LifePoint}";     
 
-        RankAirSabunText.text = $"Rank {GameData.Rank_AirSabun}";
-        RankJaringText.text = $"Rank {GameData.Rank_Jaring}";   
-        RankPlastikText.text = $"Rank {GameData.Rank_Plastik}";   
+        RankAirSabunText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[0]]}";
+        RankJaringText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[1]]}";   
+        RankPlastikText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[2]]}";   
 
     }
 
