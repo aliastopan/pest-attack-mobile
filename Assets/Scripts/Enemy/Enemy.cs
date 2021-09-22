@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
       transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
     }
     else
-    {
+    {/*
       try{
         trap = Target.GetComponent<Trap>();
         transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.DebuffSpeed)) * Time.deltaTime);
@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
       }catch(System.Exception e){
         Debug.LogWarning(e);
       }
+    */
     }
   }
 
@@ -54,7 +55,8 @@ public class Enemy : MonoBehaviour
 
       Target = collision.gameObject;
       yield return new WaitForSeconds(AttackCooldown);
-      collision.gameObject.GetComponent<Rice>().OnDamaged(AttackPoint);
+      //collision.gameObject.GetComponent<Rice>().OnDamaged(AttackPoint);
+      Debug.Log($"Target: {Target.name}");
     }
 
     if(collision.gameObject.CompareTag("Trap"))

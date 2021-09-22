@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CardName
+public enum CardType
 {
     AirSabun = 1,
     Jaring = 2,
@@ -15,7 +15,7 @@ public enum CardName
 public static class GameData
 {
   public static readonly int[] MAX_ENEMY = new int[] {7, 15, 17, 22, 25};
-  public static int[] TrapRank = new int[] {2, 1, 1};
+  public static int[] TrapRank = new int[] {1, 1, 1, 1, 1, 1};
 
 
 

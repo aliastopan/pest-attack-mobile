@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    public CardName CardName;
+    public CardType CardType;
     public Sprite[] CardRank = new Sprite[3];
 
     private ObjectMaster objectMaster;
@@ -15,13 +15,21 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     private void Start()
     {
-        Debug.Log($"Card Name: {CardName}, {(int) CardName}");
         objectMaster = ObjectMaster.Instance;
-        this.gameObject.GetComponent<Image>().sprite = 
-            CardRank[GameData.TrapRank[(int) ObjectMaster.Instance.DeckSlot[(int) CardName]]];
+        int cardType = (int) CardType;
+        int cardRank = (int) GameData.TrapRank[cardType] - 1;
+        
+        //ObjectMaster.Instance.DeckSlot[cardType] - 1; //GameData.TrapRank[cardType];
+        //Debug.Log($"This: {(int) ObjectMaster.Instance.DeckSlot[cardType]}");
+
+       // Debug.Log($"card type: {cardType}, card rank: {CardRank}");
+        //Debug.Log($"{CardRank[0].name}");
+        //Debug.Log($"{CardRank[1].name}");        
+        //Debug.Log($"{CardRank[2].name}");        
+        //Debug.Log($"{cardRank}");
+        this.gameObject.GetComponent<Image>().sprite = CardRank[cardRank];
             //GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[0]]
 
-        
     }
     
     private void Update()
