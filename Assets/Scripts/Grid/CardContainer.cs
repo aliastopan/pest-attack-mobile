@@ -16,7 +16,8 @@ public class CardContainer : MonoBehaviour
 
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
-        if(collision.gameObject.tag == "Card" && this.transform.childCount == 0)
+        //if(collision.gameObject.tag == "Card" && this.transform.childCount == 0)
+        if(collision.gameObject.tag == "Card")
         {
             this.GetComponent<Image>().color = ToDropColor;
             PlayerData.AvailableGrids++;

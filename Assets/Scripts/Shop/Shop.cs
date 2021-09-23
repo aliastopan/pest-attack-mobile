@@ -8,7 +8,7 @@ public class Shop : MonoBehaviour
     {
         //Debug.Log($"{ObjectMaster.Instance.DeckSlot[0]}");
         int slot = (int)ObjectMaster.Instance.DeckSlot[0] - 1;
-        Debug.Log($"Slot: {slot}, Rank: {GameData.TrapRank[slot]}");
+       // Debug.Log($"Slot: {slot}, Rank: {GameData.TrapRank[slot]}");
         if(GameData.TrapRank[slot] < 3 ){
             GameData.TrapRank[slot]++;
         }

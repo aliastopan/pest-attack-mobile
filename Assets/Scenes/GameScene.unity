@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardType: 0
+  CardType: 1
   CardRank:
   - {fileID: 21300000, guid: d3449ba3291acc343a554601d023c3c1, type: 3}
   - {fileID: 21300000, guid: a1363d2f6cab7fe40917985c50ec8bb5, type: 3}
@@ -2515,7 +2515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &652223127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8285,7 +8285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1849985336
 RectTransform:
   m_ObjectHideFlags: 0

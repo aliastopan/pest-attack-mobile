@@ -33,7 +33,7 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         // GameData.TrapRank[0]
         int cardType = (int) CardType - 1;
         int cardRank = (int) GameData.TrapRank[cardType];
-        Debug.Log($"Card Type: {CardType} [{cardType}], Rank: {cardRank}");
+        //Debug.Log($"Card Type: {CardType} [{cardType}], Rank: {cardRank}");
         //Debug.Log($"Upgrade. {GameData.TrapRank[cardRank]}");
         this.gameObject.GetComponent<Image>().sprite = CardRank[cardRank-1];
     }
@@ -59,21 +59,23 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         int cost = (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost;
         
         //draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
-        if(PlayerData.AvailableGrids == 1 && PlayerData.CurrencyPoint >= cost)
+        if(PlayerData.AvailableGrids == 1 
+            && PlayerData.CurrencyPoint >= cost
+            && draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform.childCount == 0)
         {
             Debug.Log($"Drop Available.");
             Instantiate(draggableInstance.GetComponent<DraggableCard>().TrapCard, 
                 draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform);
 
-            PlayerData.CurrencyPoint -= cost;
-            Destroy(draggableInstance);
-
+            //PlayerData.CurrencyPoint -= cost;
         }
         else
         {
+            PlayerData.AvailableGrids = 0;
             Debug.Log($"Unable to Drop.");
         }
 
+            Destroy(draggableInstance);
 
     }
 }
