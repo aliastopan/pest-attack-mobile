@@ -2,8 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum TrapType
+{
+  Shooter,
+  Offense,
+  Defense
+}
+
 public class Trap : MonoBehaviour
 {
+    public TrapType TrapType;
     public float Cost = 50f;
     public float HealthPoint = 100f;
     public float AttackPoint = 100f;

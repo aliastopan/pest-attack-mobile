@@ -63,10 +63,11 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
             && PlayerData.CurrencyPoint >= cost
             && draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform.childCount == 0)
         {
-            Debug.Log($"Drop Available.");
-            Instantiate(draggableInstance.GetComponent<DraggableCard>().TrapCard, 
+            GameObject trap = Instantiate(draggableInstance.GetComponent<DraggableCard>().TrapCard, 
                 draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform);
-
+            Debug.Log($"Drop Available: {trap.name}");
+            //trap.name.Replace("(Clone)", ""); 
+            
             //PlayerData.CurrencyPoint -= cost;
         }
         else
@@ -75,7 +76,6 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
             Debug.Log($"Unable to Drop.");
         }
 
-            Destroy(draggableInstance);
-
+        Destroy(draggableInstance);
     }
 }

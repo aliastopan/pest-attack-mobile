@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public bool IsBattle = false;
 
     public GameObject Target;
-    private Trap trap;
+    protected Trap trap;
   public virtual void Move()
   {
     if (Target == null)
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
       transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
     }
     else
-    {/*
+    {
       try{
         trap = Target.GetComponent<Trap>();
         transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.DebuffSpeed)) * Time.deltaTime);
@@ -31,7 +31,6 @@ public class Enemy : MonoBehaviour
       }catch(System.Exception e){
         Debug.LogWarning(e);
       }
-    */
     }
   }
 
