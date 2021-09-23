@@ -16,27 +16,27 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     private void Start()
     {
         objectMaster = ObjectMaster.Instance;
-        int cardType = (int) CardType;
-        int cardRank = (int) GameData.TrapRank[cardType] - 1;
-        
-        //ObjectMaster.Instance.DeckSlot[cardType] - 1; //GameData.TrapRank[cardType];
-        //Debug.Log($"This: {(int) ObjectMaster.Instance.DeckSlot[cardType]}");
-
-       // Debug.Log($"card type: {cardType}, card rank: {CardRank}");
-        //Debug.Log($"{CardRank[0].name}");
-        //Debug.Log($"{CardRank[1].name}");        
-        //Debug.Log($"{CardRank[2].name}");        
-        //Debug.Log($"{cardRank}");
-        this.gameObject.GetComponent<Image>().sprite = CardRank[cardRank];
-            //GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[0]]
+        OnUpgrade();            
 
     }
     
     private void Update()
     {
         if(PlayerData.AvailableGrids < 0)
-            PlayerData.AvailableGrids = 0;    }
+            PlayerData.AvailableGrids = 0;    
 
+       OnUpgrade();            
+    }
+
+    public void OnUpgrade()
+    {
+        // GameData.TrapRank[0]
+        int cardType = (int) CardType - 1;
+        int cardRank = (int) GameData.TrapRank[cardType];
+        Debug.Log($"Card Type: {CardType} [{cardType}], Rank: {cardRank}");
+        //Debug.Log($"Upgrade. {GameData.TrapRank[cardRank]}");
+        this.gameObject.GetComponent<Image>().sprite = CardRank[cardRank-1];
+    }
 
     public void OnDrag(PointerEventData eventData)
     {

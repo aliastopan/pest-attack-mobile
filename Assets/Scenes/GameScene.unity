@@ -951,8 +951,9 @@ GameObject:
   - component: {fileID: 154221226}
   - component: {fileID: 154221225}
   - component: {fileID: 154221224}
+  - component: {fileID: 154221227}
   m_Layer: 5
-  m_Name: B
+  m_Name: Padi_B
   m_TagString: Padi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,6 +1042,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154221222}
   m_CullTransparentMesh: 1
+--- !u!114 &154221227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154221222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ee6f7da4231c34991a768db5414a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoint: 50
+  AttackPoint: 25
 --- !u!1 &203553611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,7 +1974,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 457598470}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 260045453}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: CloseShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &457598470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2488,7 +2515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &652223127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2690,8 +2717,9 @@ GameObject:
   - component: {fileID: 720495457}
   - component: {fileID: 720495456}
   - component: {fileID: 720495455}
+  - component: {fileID: 720495458}
   m_Layer: 5
-  m_Name: D
+  m_Name: Padi_D
   m_TagString: Padi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2780,6 +2808,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720495453}
   m_CullTransparentMesh: 1
+--- !u!114 &720495458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720495453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ee6f7da4231c34991a768db5414a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoint: 50
+  AttackPoint: 25
 --- !u!1 &746859562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,8 +3280,9 @@ GameObject:
   - component: {fileID: 798522212}
   - component: {fileID: 798522211}
   - component: {fileID: 798522210}
+  - component: {fileID: 798522213}
   m_Layer: 5
-  m_Name: A
+  m_Name: Padi_A
   m_TagString: Padi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3328,6 +3371,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798522208}
   m_CullTransparentMesh: 1
+--- !u!114 &798522213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798522208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ee6f7da4231c34991a768db5414a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoint: 50
+  AttackPoint: 25
 --- !u!1 &820257595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,8 +4208,9 @@ GameObject:
   - component: {fileID: 944254052}
   - component: {fileID: 944254051}
   - component: {fileID: 944254050}
+  - component: {fileID: 944254053}
   m_Layer: 5
-  m_Name: C
+  m_Name: Padi_C
   m_TagString: Padi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4241,6 +4299,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944254048}
   m_CullTransparentMesh: 1
+--- !u!114 &944254053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944254048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ee6f7da4231c34991a768db5414a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoint: 50
+  AttackPoint: 25
 --- !u!1 &966710281
 GameObject:
   m_ObjectHideFlags: 0
@@ -6361,8 +6433,9 @@ GameObject:
   - component: {fileID: 1376690484}
   - component: {fileID: 1376690483}
   - component: {fileID: 1376690482}
+  - component: {fileID: 1376690485}
   m_Layer: 5
-  m_Name: E
+  m_Name: Padi_E
   m_TagString: Padi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6451,6 +6524,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376690480}
   m_CullTransparentMesh: 1
+--- !u!114 &1376690485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376690480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ee6f7da4231c34991a768db5414a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoint: 50
+  AttackPoint: 25
 --- !u!1 &1385428566
 GameObject:
   m_ObjectHideFlags: 0
@@ -8198,7 +8285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1849985336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8911,7 +8998,7 @@ GameObject:
   - component: {fileID: 2038332645}
   - component: {fileID: 2038332644}
   m_Layer: 5
-  m_Name: Jaring (1)
+  m_Name: Plastik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
