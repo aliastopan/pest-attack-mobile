@@ -26,6 +26,10 @@ public class ObjectMaster : MonoBehaviour
     {
         //DefaultColor = ObjectMaster.Instance.DefaultColor;
         //ToDropColor = ObjectMaster.Instance.ToDropColor;    
+        if(PlayerData.LifePoint == 0)
+        {
+            Debug.Log("You Lose!");
+        }
     }
 
 }

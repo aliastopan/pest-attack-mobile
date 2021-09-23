@@ -56,7 +56,8 @@ public class Enemy : MonoBehaviour
       Target = collision.gameObject;
       yield return new WaitForSeconds(AttackCooldown);
       //collision.gameObject.GetComponent<Rice>().OnDamaged(AttackPoint);
-      Debug.Log($"Target: {Target.name}");
+      //Debug.Log($"Target: {Target.name}");
+      Target.GetComponent<Rice>().OnDamaged(AttackPoint);
     }
 
     if(collision.gameObject.CompareTag("Trap"))

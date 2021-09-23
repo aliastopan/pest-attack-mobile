@@ -11,7 +11,10 @@ public class Rice : MonoBehaviour
   public void OnDamaged(float damagePoint)
   {
     if(HealthPoint - damagePoint <= 0)
-      Destroy(this.gameObject);
+    {
+        Destroy(this.gameObject);
+        PlayerData.LifePoint--;
+    }
     else
       HealthPoint -= damagePoint;
       //Debug.Log($"Rice Defense was Hit!!!");
