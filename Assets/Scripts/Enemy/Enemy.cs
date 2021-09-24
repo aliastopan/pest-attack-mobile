@@ -39,7 +39,6 @@ public class Enemy : MonoBehaviour
         StartCoroutine(Attack(collision));
     }
 
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         Target = null;
@@ -50,19 +49,14 @@ public class Enemy : MonoBehaviour
   {
     if(collision.gameObject.CompareTag("Padi"))
     {
-      //Debug.Log("Attacking Padi....");
-
       Target = collision.gameObject;
       yield return new WaitForSeconds(AttackCooldown);
-      //collision.gameObject.GetComponent<Rice>().OnDamaged(AttackPoint);
-      //Debug.Log($"Target: {Target.name}");
       Target.GetComponent<Rice>().OnDamaged(AttackPoint);
     }
 
     if(collision.gameObject.CompareTag("Trap"))
     {
       Debug.Log("Attacking Trap....");
-
       Target = collision.gameObject;
       yield return new WaitForSeconds(AttackCooldown);
     }

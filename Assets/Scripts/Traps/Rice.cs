@@ -23,6 +23,7 @@ public class Rice : MonoBehaviour
 
   public void OnDestroy()
   {
+    this.gameObject.GetComponent<Collider2D>().enabled = false;
     Destroy(this.gameObject);
   }
 }

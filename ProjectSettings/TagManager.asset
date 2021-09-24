@@ -9,6 +9,7 @@ TagManager:
   - Padi
   - Trap
   - Enemy
+  - DEBUG
   layers:
   - Default
   - TransparentFX

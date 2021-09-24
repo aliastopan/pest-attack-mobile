@@ -17,14 +17,15 @@ public class Tikus : Enemy
     }
     else
     {
+      Debug.Log("Trapping");
       try{
         trap = Target.GetComponent<Trap>();
         transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.DebuffSpeed)) * Time.deltaTime);
-
         Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
 
       }catch(System.Exception e){
         Debug.LogWarning(e);
+        return;
       }
     }
   }

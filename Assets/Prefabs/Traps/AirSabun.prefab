@@ -115,8 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23d0c66b2b8d9e4fa17c3b21ae04594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrapType: 0
   Cost: 100
   HealthPoint: 100
   AttackPoint: 100
   AttackCooldown: 2
-  DebuffSpeed: 0.25
+  DebuffSpeed: 0

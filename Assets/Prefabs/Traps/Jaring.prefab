@@ -120,4 +120,4 @@ MonoBehaviour:
   HealthPoint: 100
   AttackPoint: 100
   AttackCooldown: 2
-  DebuffSpeed: 0.25
+  DebuffSpeed: 0.5
