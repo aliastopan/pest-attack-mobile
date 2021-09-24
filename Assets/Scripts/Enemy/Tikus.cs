@@ -11,9 +11,14 @@ public class Tikus : Enemy
 
   public override void Move()
   {
+    /*
     if (Target == null)
     {
       transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
+    }
+    else if(Target == null)
+    {
+
     }
     else
     {
@@ -28,6 +33,7 @@ public class Tikus : Enemy
         return;
       }
     }
+    */
   }
 
 

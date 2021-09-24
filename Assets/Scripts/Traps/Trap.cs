@@ -12,6 +12,7 @@ public enum TrapType
 
 public class Trap : MonoBehaviour
 {
+    public TrapStats TrapStats;
     public TrapType TrapType;
     public float Cost = 50f;
     public float HealthPoint = 100f;

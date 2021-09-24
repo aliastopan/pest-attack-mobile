@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9aaf124246dcc24b832c0860aebe77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrapStats: {fileID: 11400000, guid: 375b855f3ff9d674fb346b0a62b9daf6, type: 2}
   TrapType: 1
   Cost: 50
   HealthPoint: 100
