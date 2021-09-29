@@ -10,21 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980b6d6e5c5f51d4ebd699bda23d930a, type: 3}
-  m_Name: PlastikStats
+  m_Name: PadiStats
   m_EditorClassIdentifier: 
   StatsByRank:
-  - Cost: 25
-    HealthPoint: 100
-    AttackPoint: 0
-    AttackCooldown: 0
-    DebuffSpeed: 0.5
-  - Cost: 50
-    HealthPoint: 150
-    AttackPoint: 0
-    AttackCooldown: 0
-    DebuffSpeed: 0.65
-  - Cost: 100
-    HealthPoint: 200
-    AttackPoint: 0
-    AttackCooldown: 0
-    DebuffSpeed: 0.85
+  - Cost: 0
+    HealthPoint: 250
+    AttackPoint: 250
+    AttackCooldown: 3
+    DebuffSpeed: 1

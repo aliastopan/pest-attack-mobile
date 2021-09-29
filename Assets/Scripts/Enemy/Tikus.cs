@@ -6,7 +6,7 @@ public class Tikus : Enemy
 {
   private void Update()
   {
-    Move();
+    base.Move();
   }
 
   public override void Move()

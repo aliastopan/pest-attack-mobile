@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum CardType
 {
+    Padi = 0,
     AirSabun = 1,
     Jaring = 2,
     Plastik = 3,
@@ -15,7 +16,7 @@ public enum CardType
 public static class GameData
 {
   public static readonly int[] MAX_ENEMY = new int[] {7, 15, 17, 22, 25};
-  public static int[] TrapRank = new int[] {1, 1, 1, 1, 1, 1};
+  public static int[] TrapRank = new int[] {1, 1, 1, 1, 1, 1, 1};
 
 
 

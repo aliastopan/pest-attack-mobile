@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rice : MonoBehaviour
+public class Rice : Trap
 {
-
-  public float HealthPoint = 50f;
-  public float AttackPoint = 25f;
-
   public void OnDamaged(float damagePoint)
   {
     if(HealthPoint - damagePoint <= 0)
     {
-        Destroy(this.gameObject);
-        PlayerData.LifePoint--;
+      this.gameObject.GetComponent<Collider2D>().enabled = false;
+      Destroy(this.gameObject);
+      PlayerData.LifePoint--;
     }
     else
       HealthPoint -= damagePoint;
@@ -23,7 +20,6 @@ public class Rice : MonoBehaviour
 
   public void OnDestroy()
   {
-    this.gameObject.GetComponent<Collider2D>().enabled = false;
     Destroy(this.gameObject);
   }
 }

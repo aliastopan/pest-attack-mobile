@@ -24,14 +24,30 @@ public class Enemy : MonoBehaviour
     {
       try{
         trap = Target.GetComponent<Trap>();
-        transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.DebuffSpeed)) * Time.deltaTime);
+        transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.TrapStats.StatsByRank[0].DebuffSpeed)) * Time.deltaTime);
 
         Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
+        if (trap == null)
+          return;
 
       }catch(System.Exception e){
         Debug.LogWarning(e);
       }
     }
+  }
+
+  public void Battle()
+  {
+    trap = Target.GetComponent<Trap>();
+    int trapType = (int) trap.TrapType; 
+    float speed = MovementSpeed - (MovementSpeed * trap.TrapStats.StatsByRank[trapType].DebuffSpeed);
+    transform.Translate(Vector3.left * speed * Time.deltaTime);
+
+    Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
+    if (trap == null)
+      return;
+
+
   }
 
     private void OnTriggerEnter2D(Collider2D collision)

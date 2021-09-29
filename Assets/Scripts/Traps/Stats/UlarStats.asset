@@ -12,8 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980b6d6e5c5f51d4ebd699bda23d930a, type: 3}
   m_Name: UlarStats
   m_EditorClassIdentifier: 
-  Cost: 50
-  HealthPoint: 100
-  AttackPoint: 100
-  AttackCooldown: 2
-  DebuffSpeed: 0.25
+  StatsByRank:
+  - Cost: 0
+    HealthPoint: 0
+    AttackPoint: 0
+    AttackCooldown: 0
+    DebuffSpeed: 0
+  - Cost: 0
+    HealthPoint: 0
+    AttackPoint: 0
+    AttackCooldown: 0
+    DebuffSpeed: 0
+  - Cost: 0
+    HealthPoint: 0
+    AttackPoint: 0
+    AttackCooldown: 0
+    DebuffSpeed: 0

@@ -31,7 +31,7 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     public void OnUpgrade()
     {
         // GameData.TrapRank[0]
-        int cardType = (int) CardType - 1;
+        int cardType = (int) CardType;
         int cardRank = (int) GameData.TrapRank[cardType];
         //Debug.Log($"Card Type: {CardType} [{cardType}], Rank: {cardRank}");
         //Debug.Log($"Upgrade. {GameData.TrapRank[cardRank]}");
