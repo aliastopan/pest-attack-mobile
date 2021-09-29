@@ -15,6 +15,13 @@ public class UIManager : MonoBehaviour
     public Text RankAirSabunText;
     public Text RankJaringText;
     public Text RankPlastikText;
+
+    public Text RankBebekText;
+    public Text RankBurungHantuText;
+    public Text RankUlarText;
+
+
+
     
     
 
@@ -31,9 +38,12 @@ public class UIManager : MonoBehaviour
         collectableText.text = $"{PlayerData.CurrencyPoint}";
         lifePointText.text = $"{PlayerData.LifePoint}";     
 
-        RankAirSabunText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[0]]}";
-        RankJaringText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[1]]}";   
-        RankPlastikText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[2]]}";   
+        RankAirSabunText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]}";
+        RankJaringText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Jaring]]}";   
+        RankPlastikText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Plastik]]}";   
+        RankBebekText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]]}";   
+        RankBurungHantuText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]]}";   
+        RankUlarText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]}";   
 
     }
 
