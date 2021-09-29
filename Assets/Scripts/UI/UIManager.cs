@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        collectableText.text = $"{PlayerData.CurrencyPoint}";
+        collectableText.text = $"{PlayerData.CurrentTaelPoint}";
         lifePointText.text = $"{PlayerData.LifePoint}";     
 
         RankAirSabunText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]}";

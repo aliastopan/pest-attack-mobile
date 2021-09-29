@@ -61,6 +61,7 @@ public class Enemy : MonoBehaviour
         trap = null;
     }
 
+  float duration = 0f;
   IEnumerator Attack(Collider2D collision)
   {
     if(collision.gameObject.CompareTag("Padi"))
@@ -68,6 +69,8 @@ public class Enemy : MonoBehaviour
       Target = collision.gameObject;
       yield return new WaitForSeconds(AttackCooldown);
       Target.GetComponent<Rice>().OnDamaged(AttackPoint);
+      duration += Time.deltaTime;
+      //Debug.Log($"Duration: {duration}");
     }
 
     if(collision.gameObject.CompareTag("Trap"))

@@ -25,8 +25,20 @@ public class Trap : MonoBehaviour
     private void Start() 
     {
         int rank = GameData.TrapRank[(int) TrapType];
-        Debug.Log($"{this.gameObject.name} rank: {rank}");
+        Debug.Log($"{this.gameObject.name} rank: {rank}, available rank: {TrapStats.StatsByRank.Count}");
 
+        if(TrapStats != null && TrapStats.StatsByRank.Count > 0)
+        {
+            HealthPoint = TrapStats.StatsByRank[rank-1].HealthPoint;
+        } 
+
+
+        /*
+        if(this.gameObject.tag == "Trap")
+        {
+            Debug.Log($"TRAP LOGGED");
+        }
+        
         if(TrapStats.StatsByRank.Count > 0)
         {
             Cost = TrapStats.StatsByRank[rank].Cost;
@@ -35,6 +47,8 @@ public class Trap : MonoBehaviour
             AttackCooldown = TrapStats.StatsByRank[rank].AttackCooldown;
             DebuffSpeed = TrapStats.StatsByRank[rank].DebuffSpeed;
         } 
+        
+        */
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

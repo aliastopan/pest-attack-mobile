@@ -40,7 +40,7 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnDrag(PointerEventData eventData)
     {
-        if(PlayerData.CurrencyPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
+        if(PlayerData.CurrentTaelPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
         {
             Vector3 pointerPosition = ObjectMaster.Instance.Camera.ScreenToWorldPoint(Input.mousePosition);
             pointerPosition.z = 0f;
@@ -50,7 +50,7 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(PlayerData.CurrencyPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
+        if(PlayerData.CurrentTaelPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
             draggableInstance = Instantiate(DraggableCard, this.transform);
     }
 
@@ -61,7 +61,7 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         try{
             //draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
             bool isGridOpen = PlayerData.AvailableGrids == 1;
-            bool isCostSuffice = PlayerData.CurrencyPoint >= cost;
+            bool isCostSuffice = PlayerData.CurrentTaelPoint >= cost;
             bool isGridEmpty = draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform.childCount == 0; 
 
             if(isGridOpen && isCostSuffice && isGridEmpty)
