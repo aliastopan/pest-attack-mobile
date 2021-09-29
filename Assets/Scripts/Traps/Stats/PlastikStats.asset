@@ -17,14 +17,14 @@ MonoBehaviour:
     HealthPoint: 100
     AttackPoint: 0
     AttackCooldown: 0
-    DebuffSpeed: 0.5
+    DebuffSpeed: 0.25
   - Cost: 50
     HealthPoint: 150
     AttackPoint: 0
     AttackCooldown: 0
-    DebuffSpeed: 0.65
+    DebuffSpeed: 0.5
   - Cost: 100
     HealthPoint: 200
     AttackPoint: 0
     AttackCooldown: 0
-    DebuffSpeed: 0.85
+    DebuffSpeed: 0.9

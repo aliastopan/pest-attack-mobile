@@ -58,23 +58,32 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     {
         int cost = (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost;
         
-        //draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
-        if(PlayerData.AvailableGrids == 1 
-            && PlayerData.CurrencyPoint >= cost
-            && draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform.childCount == 0)
-        {
-            GameObject trap = Instantiate(draggableInstance.GetComponent<DraggableCard>().TrapCard, 
-                draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform);
-           // Debug.Log($"Drop Available: {trap.name}");
-            //trap.name.Replace("(Clone)", ""); 
+        try{
+            //draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
+            bool isGridOpen = PlayerData.AvailableGrids == 1;
+            bool isCostSuffice = PlayerData.CurrencyPoint >= cost;
+            bool isGridEmpty = draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform.childCount == 0; 
+
+            if(isGridOpen && isCostSuffice && isGridEmpty)
+            {
+                GameObject instance = draggableInstance.GetComponent<DraggableCard>().TrapCard;
+                Transform location = draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform;
+                GameObject trap = Instantiate(instance, location);
+                // Debug.Log($"Drop Available: {trap.name}");
+                //trap.name.Replace("(Clone)", ""); 
+                //PlayerData.CurrencyPoint -= cost;
             
-            //PlayerData.CurrencyPoint -= cost;
+            }
+            else
+            {
+                PlayerData.AvailableGrids = 0;
+                //Debug.Log($"Unable to Drop.");
+            }
+        }catch(System.Exception e){
+            Debug.LogWarning($"{e}");
         }
-        else
-        {
-            PlayerData.AvailableGrids = 0;
-            //Debug.Log($"Unable to Drop.");
-        }
+
+
 
         Destroy(draggableInstance);
     }

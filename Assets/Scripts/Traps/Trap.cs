@@ -14,12 +14,28 @@ public class Trap : MonoBehaviour
 {
     public TrapStats TrapStats;
     public TrapType TrapType;
-    public float Cost = 50f;
-    public float HealthPoint = 100f;
-    public float AttackPoint = 100f;
-    public float AttackCooldown = 2f;
-    public float DebuffSpeed = 0.25f;
+    
 
+    public float Cost; // = 50f;
+    public float HealthPoint; // = 100f;
+    public float AttackPoint; // = 100f;
+    public float AttackCooldown; // = 2f;
+    public float DebuffSpeed; // = 0.25f;
+
+    private void Start() 
+    {
+        int rank = GameData.TrapRank[(int) TrapType];
+        Debug.Log($"{this.gameObject.name} rank: {rank}");
+
+        Cost = TrapStats.StatsByRank[rank].Cost;
+        HealthPoint = TrapStats.StatsByRank[rank].HealthPoint;
+        AttackPoint = TrapStats.StatsByRank[rank].AttackCooldown;
+        AttackCooldown = TrapStats.StatsByRank[rank].AttackCooldown;
+        DebuffSpeed = TrapStats.StatsByRank[rank].DebuffSpeed;
+
+
+
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         StartCoroutine(Defense(collision));
