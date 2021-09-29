@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tikus : Enemy
+public class WalangSangit : Enemy
 {
-  private void Update()
-  {
-    base.Move();
-  }
-  
+
 }

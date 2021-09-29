@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 129919669}
   - component: {fileID: 129919668}
   m_Layer: 5
-  m_Name: RankText
+  m_Name: AirSabunRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1513,6 +1513,9 @@ MonoBehaviour:
   RankAirSabunText: {fileID: 129919668}
   RankJaringText: {fileID: 480532238}
   RankPlastikText: {fileID: 1055768385}
+  RankBebekText: {fileID: 474564724}
+  RankBurungHantuText: {fileID: 1451346016}
+  RankUlarText: {fileID: 1289148860}
 --- !u!1 &340112523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,7 +2048,7 @@ GameObject:
   - component: {fileID: 474564725}
   - component: {fileID: 474564724}
   m_Layer: 5
-  m_Name: RankText
+  m_Name: BebekRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2124,7 +2127,7 @@ GameObject:
   - component: {fileID: 480532239}
   - component: {fileID: 480532238}
   m_Layer: 5
-  m_Name: RankText
+  m_Name: JaringRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5015,7 +5018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016632944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5322,7 +5325,7 @@ GameObject:
   - component: {fileID: 1055768386}
   - component: {fileID: 1055768385}
   m_Layer: 5
-  m_Name: RankText
+  m_Name: PlastikRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6526,7 +6529,7 @@ GameObject:
   - component: {fileID: 1289148861}
   - component: {fileID: 1289148860}
   m_Layer: 5
-  m_Name: RankText
+  m_Name: UlarRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7627,7 +7630,7 @@ GameObject:
   - component: {fileID: 1451346017}
   - component: {fileID: 1451346016}
   m_Layer: 5
-  m_Name: RankText
+  m_Name: BurungHantuRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
