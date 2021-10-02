@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public float MovementSpeed = 25f;
     public float SpeedFactor = 1f;
     public bool IsBattle = false;
+    //public List<GameObject> Targets = new List<GameObject>();
+    
     public GameObject Target;
     protected Trap trap;
     protected InternalClock clock;
@@ -19,7 +21,7 @@ public class Enemy : MonoBehaviour
     public float TimeDebug;
     public virtual void Update()
     {
-        //Battle();
+        Battle();
         OnDead();
     }
 
@@ -35,28 +37,26 @@ public class Enemy : MonoBehaviour
 
     private void Battle()
     {
-        if (Target == null)
-        {
+        if(Target == null)
             clock = null;
-            Target = null;
-        }
 
-        if (clock != null)
+        if(clock != null)
         {
             clock.tLapseRepeat();
-            TimeDebug = clock.t;
+            TimeDebug = (float) System.Math.Round(clock.t, 2);
             if (clock.t == 0)
             {
-                try
-                {
-                    Trap targetTrap = Target.GetComponent<Trap>();
-                    targetTrap.HealthPoint -= AttackPoint;
-                }
-                catch (System.Exception log)
-                {
-                    Debug.Log($"{log}");                        
-                }
-                
+              Debug.LogWarning($"Battle");
+
+              if(Target != null)
+              {
+                Trap targetTrap = Target.GetComponent<Trap>();
+                targetTrap.HealthPoint -= AttackPoint;
+              }
+              else
+                Debug.LogWarning($"Enemy Target NULL");
+
+
             }
         }
     }

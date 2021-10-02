@@ -76,7 +76,7 @@ public class Trap : MonoBehaviour
             TimeDebug = (float) System.Math.Round(clock.t, 2);
             if (clock.t == 0)
             {
-                Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
+                //Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
                 foreach (GameObject target in Targets)
                 {
                     try
@@ -120,7 +120,7 @@ public class Trap : MonoBehaviour
        if(collision.gameObject.tag == "Enemy")
         {
             Targets.Remove(collision.gameObject);
-            Debug.Log("Exit");
+            //Debug.Log("Exit");
         }
     }
 
