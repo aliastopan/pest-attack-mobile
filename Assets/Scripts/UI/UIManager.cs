@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject ShopScreen;
+    public GameObject PauseSceen;
+
 	public Text collectableText;
     public Text lifePointText;
 	public static int collectable;
     public static int lifePoint;
 
-    public Image ShopScreen;
 
     public Text RankAirSabunText;
     public Text RankJaringText;
@@ -30,6 +32,9 @@ public class UIManager : MonoBehaviour
     {
         collectable = 0;
         lifePoint = 0;
+
+        PauseSceen.SetActive(false);
+        ShopScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,17 +52,28 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void OpenPauseScreen()
+    {
+        PauseSceen.SetActive(true);
+        PauseGame();
+    }
+
+    public void ClosePauseScreen()
+    {
+        ShopScreen.SetActive(false);
+        ResumeGame();
+    }
 
     public void OpenShop()
     {
         Time.timeScale = 0;
-        ShopScreen.gameObject.SetActive(true);
+        ShopScreen.SetActive(true);
     }
 
     public void CloseShop()
     {
         Time.timeScale = 1;
-        ShopScreen.gameObject.SetActive(false);
+        ShopScreen.SetActive(false);
     }
 
     public void PauseGame()
@@ -69,5 +85,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
+
 
 }
