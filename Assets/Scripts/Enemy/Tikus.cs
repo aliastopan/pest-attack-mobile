@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tikus : Hostile
+public class Tikus : Enemy
 {
   public override void Update()
   {

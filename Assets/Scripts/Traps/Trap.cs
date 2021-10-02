@@ -38,12 +38,14 @@ public class Trap : MonoBehaviour
             DebuffSpeed = TrapStats.StatsByRank[rank-1].DebuffSpeed;
         }
 
+        /*
         Debug.Log($"{this.gameObject.name} rank: {rank}, available rank: {TrapStats.StatsByRank.Count}");
         Debug.Log($"COST: {Cost}");
         Debug.Log($"ATK: {AttackPoint}");
         Debug.Log($"HP: {HealthPoint}");
         Debug.Log($"CD: {AttackCooldown}");
         Debug.Log($"DEBUFF: {DebuffSpeed}");
+        */
 
     }
 
@@ -68,10 +70,10 @@ public class Trap : MonoBehaviour
         if(Targets.Count == 0)
             clock = null;
 
-        if (clock != null)
+        if(clock != null)
         {
             clock.tLapseRepeat();
-            TimeDebug = clock.t;
+            TimeDebug = (float) System.Math.Round(clock.t, 2);
             if (clock.t == 0)
             {
                 Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
