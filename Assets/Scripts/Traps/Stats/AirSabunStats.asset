@@ -15,19 +15,19 @@ MonoBehaviour:
   StatsByRank:
   - Cost: 50
     HealthPoint: 100
-    AttackPoint: 100
+    AttackPoint: 5
     AttackCooldown: 2
-    DebuffSpeed: 0.25
+    DebuffSpeed: 1
     UpgradeCost: 35
   - Cost: 75
     HealthPoint: 100
     AttackPoint: 100
     AttackCooldown: 2
-    DebuffSpeed: 0.25
+    DebuffSpeed: 1
     UpgradeCost: 35
   - Cost: 100
     HealthPoint: 100
     AttackPoint: 100
     AttackCooldown: 2
-    DebuffSpeed: 0.25
+    DebuffSpeed: 1
     UpgradeCost: 35

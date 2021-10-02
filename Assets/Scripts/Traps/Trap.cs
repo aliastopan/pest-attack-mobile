@@ -120,32 +120,9 @@ public class Trap : MonoBehaviour
        if(collision.gameObject.tag == "Enemy")
         {
             Targets.Remove(collision.gameObject);
-            //Debug.Log("Exit");
         }
     }
 
 
 
-
-
-
-
-
-
-    IEnumerator Defense(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Enemy"))
-        {
-            // Debug.Log("Under Attack....");
-            yield return new WaitForSeconds(AttackCooldown);
-        }   
-    }
-
-    public void OnDamaged(float damagePoint)
-    {
-        if(HealthPoint - damagePoint <= 0)
-            Destroy(this.gameObject);
-        else
-        HealthPoint -= damagePoint;
-    }
 }

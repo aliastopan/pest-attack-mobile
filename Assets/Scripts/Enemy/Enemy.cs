@@ -46,17 +46,12 @@ public class Enemy : MonoBehaviour
             TimeDebug = (float) System.Math.Round(clock.t, 2);
             if (clock.t == 0)
             {
-              Debug.LogWarning($"Battle");
-
+              //Debug.LogWarning($"Battle");
               if(Target != null)
               {
                 Trap targetTrap = Target.GetComponent<Trap>();
                 targetTrap.HealthPoint -= AttackPoint;
               }
-              else
-                Debug.LogWarning($"Enemy Target NULL");
-
-
             }
         }
     }
@@ -106,8 +101,7 @@ public class Enemy : MonoBehaviour
     {
        if(collision.gameObject.CompareTag("Padi") || collision.gameObject.CompareTag("Trap"))
         {
-            //Targets.Remove(collision.gameObject);
-            //Debug.Log("Exit");
+
         }
     }
 }

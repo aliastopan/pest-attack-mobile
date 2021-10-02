@@ -1162,6 +1162,8 @@ MonoBehaviour:
   AttackPoint: 25
   AttackCooldown: 2
   DebuffSpeed: 0.25
+  Targets: []
+  TimeDebug: 0
 --- !u!1 &203553611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3165,8 @@ MonoBehaviour:
   AttackPoint: 25
   AttackCooldown: 2
   DebuffSpeed: 0.25
+  Targets: []
+  TimeDebug: 0
 --- !u!1 &736351836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,6 +3889,8 @@ MonoBehaviour:
   AttackPoint: 25
   AttackCooldown: 2
   DebuffSpeed: 0.25
+  Targets: []
+  TimeDebug: 0
 --- !u!1 &820257595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,6 +4824,8 @@ MonoBehaviour:
   AttackPoint: 25
   AttackCooldown: 2
   DebuffSpeed: 0.25
+  Targets: []
+  TimeDebug: 0
 --- !u!1 &966710281
 GameObject:
   m_ObjectHideFlags: 0
@@ -7338,6 +7346,8 @@ MonoBehaviour:
   AttackPoint: 25
   AttackCooldown: 2
   DebuffSpeed: 0.25
+  Targets: []
+  TimeDebug: 0
 --- !u!1 &1385428566
 GameObject:
   m_ObjectHideFlags: 0
@@ -11020,13 +11030,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 537796635}
     m_Modifications:
+    - target: {fileID: -870199958568423856, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: AttackPoint
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: m_Name
       value: Tikus
       objectReference: {fileID: 0}
     - target: {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6761527876177307733, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: m_Pivot.x
