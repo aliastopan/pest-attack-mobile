@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rice : Trap
 {
-  public void OnDamaged(float damagePoint)
+  public void OnDamaged2(float damagePoint)
   {
     if(HealthPoint - damagePoint <= 0)
     {

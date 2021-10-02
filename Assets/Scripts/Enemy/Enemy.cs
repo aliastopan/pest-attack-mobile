@@ -14,27 +14,52 @@ public class Enemy : MonoBehaviour
 
     public GameObject Target;
     protected Trap trap;
-  public virtual void Move()
-  {
-    if (Target == null)
+    protected InternalClock clock;
+
+    public virtual void Start() 
     {
-      transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
+      
     }
-    else
+
+    private void Update() 
     {
-      try{
-        trap = Target.GetComponent<Trap>();
-        transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.TrapStats.StatsByRank[0].DebuffSpeed)) * Time.deltaTime);
+      if(HealthPoint <= 0)
+      {
+        this.gameObject.GetComponent<Collider2D>().enabled = false;
+        Destroy(this);
+      }  
+    }
 
-        //Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
-        if (trap == null)
-          return;
-
-      }catch(System.Exception e){
-        Debug.LogWarning(e);
+    public void EnemyBehaviour()
+    {
+      if(Target != null)
+      {
+          Target.GetComponent<Trap>().OnDamaged(AttackPoint);
+          duration += Time.deltaTime;
       }
     }
-  }
+
+    public virtual void Move()
+    {
+        if (Target == null)
+        {
+          transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
+        }
+      else
+      {
+        try{
+          trap = Target.GetComponent<Trap>();
+          transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.TrapStats.StatsByRank[0].DebuffSpeed)) * Time.deltaTime);
+
+          //Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
+          if (trap == null)
+            return;
+
+        }catch(System.Exception e){
+          Debug.LogWarning(e);
+        }
+      }
+    } 
 
   public void Battle()
   {
@@ -53,14 +78,17 @@ public class Enemy : MonoBehaviour
     {
       bool isTarget = collision.gameObject.CompareTag("Padi") || collision.gameObject.CompareTag("Trap");
       if(isTarget)
+      {
         Target = collision.gameObject;
+        clock = new InternalClock(Target.GetComponent<Trap>().AttackCooldown);
+      }
     }
 
     private void OnTriggerStay2D(Collider2D collider) 
     {
       if(Target != null)
       try{
-          StartCoroutine(Attack(collider));  
+          //StartCoroutine(Attack(collider));  
       }
       catch (System.Exception log){
           Debug.LogWarning(log);
@@ -76,7 +104,7 @@ public class Enemy : MonoBehaviour
         Target = null;
         trap = null;
         duration = 0f;
-        Debug.Log($"Exit");
+        //Debug.Log($"Exit");
       }
     }
 
