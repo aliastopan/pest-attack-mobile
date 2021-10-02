@@ -74,7 +74,7 @@ public class Trap : MonoBehaviour
             TimeDebug = clock.t;
             if (clock.t == 0)
             {
-                //Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
+                Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
                 foreach (GameObject target in Targets)
                 {
                     try
