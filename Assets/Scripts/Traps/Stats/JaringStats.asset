@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: JaringStats
   m_EditorClassIdentifier: 
   StatsByRank:
-  - Cost: 50
+  - Cost: 75
     HealthPoint: 100
     AttackPoint: 50
     AttackCooldown: 3
     DebuffSpeed: 0.25
-  - Cost: 50
+    UpgradeCost: 35
+  - Cost: 100
     HealthPoint: 100
     AttackPoint: 50
     AttackCooldown: 2.8
     DebuffSpeed: 0.25
-  - Cost: 50
+    UpgradeCost: 35
+  - Cost: 125
     HealthPoint: 100
     AttackPoint: 50
     AttackCooldown: 2.5
     DebuffSpeed: 0.25
+    UpgradeCost: 35

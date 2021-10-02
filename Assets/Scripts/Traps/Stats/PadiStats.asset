@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StatsByRank:
   - Cost: 0
-    HealthPoint: 50
+    HealthPoint: 150
     AttackPoint: 250
     AttackCooldown: 3
     DebuffSpeed: 1
+    UpgradeCost: 35

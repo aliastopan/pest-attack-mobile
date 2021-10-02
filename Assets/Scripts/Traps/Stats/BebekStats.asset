@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: BebekStats
   m_EditorClassIdentifier: 
   StatsByRank:
-  - Cost: 0
+  - Cost: 100
     HealthPoint: 0
     AttackPoint: 0
     AttackCooldown: 0
     DebuffSpeed: 0
-  - Cost: 0
+    UpgradeCost: 35
+  - Cost: 125
     HealthPoint: 0
     AttackPoint: 0
     AttackCooldown: 0
     DebuffSpeed: 0
-  - Cost: 0
+    UpgradeCost: 35
+  - Cost: 150
     HealthPoint: 0
     AttackPoint: 0
     AttackCooldown: 0
     DebuffSpeed: 0
+    UpgradeCost: 35

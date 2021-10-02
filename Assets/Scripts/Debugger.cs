@@ -18,8 +18,8 @@ public class Debugger : MonoBehaviour
 
     private void RankCheck()
     {
-        Debug.Log($"Rank {GameData.TrapRank[0]}, {GameData.TrapRank[1]}, {GameData.TrapRank[2]}, " +
-            $"{GameData.TrapRank[3]}, {GameData.TrapRank[4]}, {GameData.TrapRank[5]}, {GameData.TrapRank[6]}");
+        //Debug.Log($"Rank {GameData.TrapRank[0]}, {GameData.TrapRank[1]}, {GameData.TrapRank[2]}, " +
+        //    $"{GameData.TrapRank[3]}, {GameData.TrapRank[4]}, {GameData.TrapRank[5]}, {GameData.TrapRank[6]}");
     }
 
     private void Update()

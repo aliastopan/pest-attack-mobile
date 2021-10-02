@@ -8,7 +8,7 @@ public class Rice : Trap
   {
     if(HealthPoint - damagePoint <= 0)
     {
-      this.gameObject.GetComponent<Collider2D>().enabled = false;
+      //this.gameObject.GetComponent<Collider2D>().enabled = false;
       Destroy(this.gameObject);
       PlayerData.LifePoint--;
     }

@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: PlastikStats
   m_EditorClassIdentifier: 
   StatsByRank:
-  - Cost: 25
+  - Cost: 75
     HealthPoint: 100
     AttackPoint: 0
     AttackCooldown: 0
     DebuffSpeed: 0.25
-  - Cost: 50
+    UpgradeCost: 35
+  - Cost: 100
     HealthPoint: 150
     AttackPoint: 0
     AttackCooldown: 0
     DebuffSpeed: 0.5
-  - Cost: 100
+    UpgradeCost: 35
+  - Cost: 125
     HealthPoint: 200
     AttackPoint: 0
     AttackCooldown: 0
     DebuffSpeed: 0.9
+    UpgradeCost: 35

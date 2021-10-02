@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         trap = Target.GetComponent<Trap>();
         transform.Translate(Vector3.left * (MovementSpeed - (MovementSpeed * trap.TrapStats.StatsByRank[0].DebuffSpeed)) * Time.deltaTime);
 
-        Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
+        //Debug.Log($"Speed: {MovementSpeed - (MovementSpeed * trap.DebuffSpeed)}");
         if (trap == null)
           return;
 
@@ -47,38 +47,74 @@ public class Enemy : MonoBehaviour
     if (trap == null)
       return;
 
-
   }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(Attack(collision));
+      bool isTarget = collision.gameObject.CompareTag("Padi") || collision.gameObject.CompareTag("Trap");
+      if(isTarget)
+        Target = collision.gameObject;
+    }
+
+    private void OnTriggerStay2D(Collider2D collider) 
+    {
+      if(Target != null)
+      try{
+          StartCoroutine(Attack(collider));  
+      }
+      catch (System.Exception log){
+          Debug.LogWarning(log);
+      }
+      
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+      bool isTarget = collision.gameObject.CompareTag("Padi") || collision.gameObject.CompareTag("Trap");
+      if(isTarget)
+      {
         Target = null;
         trap = null;
+        duration = 0f;
+        Debug.Log($"Exit");
+      }
     }
 
   float duration = 0f;
+
   IEnumerator Attack(Collider2D collision)
   {
-    if(collision.gameObject.CompareTag("Padi"))
+    if(collision.gameObject.CompareTag("Padi") && Target != null)
     {
-      Target = collision.gameObject;
-      yield return new WaitForSeconds(AttackCooldown);
-      Target.GetComponent<Rice>().OnDamaged(AttackPoint);
-      duration += Time.deltaTime;
-      //Debug.Log($"Duration: {duration}");
+      if(collision != null)
+      {
+        Target = collision.gameObject;
+        yield return new WaitForSeconds(AttackCooldown);
+        try{
+          Target.GetComponent<Rice>().OnDamaged(AttackPoint);
+          duration += Time.deltaTime;
+        }
+        catch (System.Exception log){
+          Debug.Log($"Target Destroyed: {log}");
+        }
+      }
+  
     }
 
-    if(collision.gameObject.CompareTag("Trap"))
+    
+    if(collision.gameObject.CompareTag("Trap") && Target != null)
     {
-      Debug.Log("Attacking Trap....");
       Target = collision.gameObject;
       yield return new WaitForSeconds(AttackCooldown);
+      try{
+        Target.GetComponent<Trap>().OnDamaged(AttackPoint);
+        duration += Time.deltaTime;
+      }
+      catch (System.Exception log){
+        Debug.Log($"Target Destroyed: {log}");
+      }
     }
+    
 
   }
 

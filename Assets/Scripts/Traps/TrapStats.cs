@@ -13,6 +13,7 @@ public class TrapStats : ScriptableObject
         public float AttackPoint = 100f;
         public float AttackCooldown = 2f;
         public float DebuffSpeed = 0.25f;
+        public int UpgradeCost = 35;
     }
     public List<Stats> StatsByRank = new List<Stats>();
 }
