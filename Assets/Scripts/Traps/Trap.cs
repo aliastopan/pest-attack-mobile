@@ -32,6 +32,7 @@ public class Trap : MonoBehaviour
 
         if(TrapStats != null && TrapStats.StatsByRank.Count > 0)
         {
+            Debug.LogWarning("TRAPSTATS ENTRY");
             Cost = TrapStats.StatsByRank[rank-1].Cost;
             HealthPoint = TrapStats.StatsByRank[rank-1].HealthPoint;
             AttackPoint = TrapStats.StatsByRank[rank-1].AttackPoint;
@@ -39,21 +40,19 @@ public class Trap : MonoBehaviour
             DebuffSpeed = TrapStats.StatsByRank[rank-1].DebuffSpeed;
         }
 
+        /*
         Debug.Log($"{this.gameObject.name} rank: {rank}, available rank: {TrapStats.StatsByRank.Count}");
         Debug.Log($"COST: {Cost}");
         Debug.Log($"ATK: {AttackPoint}");
         Debug.Log($"HP: {HealthPoint}");
         Debug.Log($"CD: {AttackCooldown}");
         Debug.Log($"DEBUFF: {DebuffSpeed}");
-
-
+        */
 
     }
 
     private void Update() 
     {
-        
-    
         if(Targets.Count == 0)
             clock = null;
         
@@ -71,8 +70,6 @@ public class Trap : MonoBehaviour
                 }
             }
         }
-
-        //Targets.Remove( gameObject.GetComponent<Enemy>().HealthPoint <= 0);
 
     }
 
