@@ -20,13 +20,12 @@ public class Trap : MonoBehaviour
     public float AttackCooldown; // = 2f;
     public float DebuffSpeed; // = 0.25f;
     public List<GameObject> Targets = new List<GameObject>(); 
-
     private InternalClock clock;
 
     [Header("Debug")]
     public float TimeDebug;
 
-    private void Start() 
+    public virtual void Start() 
     {
         int rank = GameData.TrapRank[(int) TrapType];
 
@@ -51,26 +50,48 @@ public class Trap : MonoBehaviour
 
     }
 
-    private void Update() 
+    public virtual void Update()
     {
-        if(Targets.Count == 0)
+        Battle();
+        OnDead();
+    }
+
+    private void OnDead()
+    {
+        if (HealthPoint <= 0)
+        {
+            Debug.Log($"{this.gameObject.name} is DEAD.");
+            this.gameObject.GetComponent<Collider2D>().enabled = false;
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void Battle()
+    {
+        if (Targets.Count == 0)
             clock = null;
-        
-        if(clock != null)
+
+        if (clock != null)
         {
             clock.tLapseRepeat();
             TimeDebug = clock.t;
-            if(clock.t == 0)
+            if (clock.t == 0)
             {
-                Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
+                //Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
                 foreach (GameObject target in Targets)
                 {
-                    Enemy targetEnemy = target.GetComponent<Enemy>();
-                    targetEnemy.HealthPoint -= AttackPoint;
+                    try
+                    {
+                        Enemy targetEnemy = target.GetComponent<Enemy>();
+                        targetEnemy.HealthPoint -= AttackPoint;
+                    }
+                    catch (System.Exception log)
+                    {
+                        Debug.Log($"{log}");                        
+                    }
                 }
             }
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -82,7 +103,6 @@ public class Trap : MonoBehaviour
             {
                 clock = new InternalClock(AttackCooldown);
                 clock.CanBegin = true;
-                //Debug.Log("Create Clock");
             }
 
         }

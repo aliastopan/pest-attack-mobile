@@ -15,6 +15,9 @@ public class Enemy : MonoBehaviour
     public GameObject Target;
     protected Trap trap;
     protected InternalClock clock;
+      
+    [Header("Debug")]
+    public float TimeDebug;
 
     public virtual void Start() 
     {
@@ -110,7 +113,6 @@ public class Enemy : MonoBehaviour
     }
 
   float duration = 0f;
-
   IEnumerator Attack(Collider2D collision)
   {
     if(collision.gameObject.CompareTag("Padi") && Target != null)
