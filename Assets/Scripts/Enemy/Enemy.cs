@@ -21,12 +21,13 @@ public class Enemy : MonoBehaviour
       
     }
 
-    private void Update() 
+    public virtual void Update() 
     {
       if(HealthPoint <= 0)
       {
+        Debug.Log($"{this.gameObject.name} is DEAD.");
         this.gameObject.GetComponent<Collider2D>().enabled = false;
-        Destroy(this);
+        Destroy(this.gameObject);
       }  
     }
 

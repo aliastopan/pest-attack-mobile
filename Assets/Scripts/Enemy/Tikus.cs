@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Tikus : Enemy
 {
-  private void Update()
+  public override void Update()
   {
     base.Move();
+    base.Update();
   }
   
 }

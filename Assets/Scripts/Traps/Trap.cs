@@ -40,7 +40,14 @@ public class Trap : MonoBehaviour
         }
 
         Debug.Log($"{this.gameObject.name} rank: {rank}, available rank: {TrapStats.StatsByRank.Count}");
+        Debug.Log($"COST: {Cost}");
         Debug.Log($"ATK: {AttackPoint}");
+        Debug.Log($"HP: {HealthPoint}");
+        Debug.Log($"CD: {AttackCooldown}");
+        Debug.Log($"DEBUFF: {DebuffSpeed}");
+
+
+
     }
 
     private void Update() 

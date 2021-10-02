@@ -119,6 +119,8 @@ MonoBehaviour:
   TrapType: 0
   Cost: 100
   HealthPoint: 100
-  AttackPoint: 100
+  AttackPoint: 15
   AttackCooldown: 2
   DebuffSpeed: 0
+  Targets: []
+  TimeDebug: 0
