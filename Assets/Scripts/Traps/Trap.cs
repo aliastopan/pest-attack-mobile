@@ -45,8 +45,6 @@ public class Trap : MonoBehaviour
         Debug.Log($"CD: {AttackCooldown}");
         Debug.Log($"DEBUFF: {DebuffSpeed}");
 
-
-
     }
 
     public virtual void Update()
@@ -67,13 +65,7 @@ public class Trap : MonoBehaviour
 
     private void Battle()
     {
-<<<<<<< HEAD
-        if (Targets.Count == 0)
-=======
-        
-    
         if(Targets.Count == 0)
->>>>>>> parent of f04e99a (commit)
             clock = null;
 
         if (clock != null)
@@ -97,12 +89,6 @@ public class Trap : MonoBehaviour
                 }
             }
         }
-<<<<<<< HEAD
-=======
-
-        //Targets.Remove( gameObject.GetComponent<Enemy>().HealthPoint <= 0);
-
->>>>>>> parent of f04e99a (commit)
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
