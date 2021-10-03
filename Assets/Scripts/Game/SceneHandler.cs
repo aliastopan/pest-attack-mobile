@@ -15,7 +15,8 @@ public class SceneHandler : MonoBehaviour
 
 	public void OnLoadStage()
 	{
-		SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
+				SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
+
 		GameData.MainMenuCanvas.gameObject.SetActive(false);
 		//PlayerData.UponRestart();
 	}
@@ -27,6 +28,15 @@ public class SceneHandler : MonoBehaviour
 		Debug.Log("... Restart");
 	}
 
+	public void Retry()
+	{
+		//Scene currentScene = SceneManager.GetActiveScene();
+		//SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
+		//SceneManager.UnloadSceneAsync(currentScene);
+		SceneManager.LoadScene("Gameplay");
+
+		
+	}
 
 	public void UponRestart()
 	{
