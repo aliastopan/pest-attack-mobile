@@ -339,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &142528678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 261038678}
   - component: {fileID: 261038677}
   m_Layer: 5
-  m_Name: StagePrevButton
+  m_Name: LevelPrevButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 261038678}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 861229159}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: PrevLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &261038678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8913a5332ae1eb24c983fdaf1c69e689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuCavas: {fileID: 0}
+  MainMenuCavas: {fileID: 463040291}
 --- !u!1 &463040288
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +934,7 @@ GameObject:
   - component: {fileID: 593145938}
   - component: {fileID: 593145937}
   m_Layer: 5
-  m_Name: StarPointImage
+  m_Name: StarPointReward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,8 +957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150.5}
-  m_SizeDelta: {x: 150, y: 35}
+  m_AnchoredPosition: {x: 0, y: 140.4}
+  m_SizeDelta: {x: 160, y: 74.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593145937
 MonoBehaviour:
@@ -961,14 +973,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.35857958, b: 0.35857958, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 285e6c3eb23b6c046a3d541bc27f1f2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1068,7 +1080,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 753401531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 861229159}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &753401531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,7 +1143,7 @@ GameObject:
   - component: {fileID: 759377906}
   - component: {fileID: 759377905}
   m_Layer: 5
-  m_Name: Text
+  m_Name: StarPointRewardText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,8 +1165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.637979e-12, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 38.9, y: -1.5}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759377905
 MonoBehaviour:
@@ -1166,8 +1190,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
-    m_FontStyle: 0
+    m_FontSize: 25
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -1177,7 +1201,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'STAR: 0'
+  m_Text: 0
 --- !u!222 &759377906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1199,7 +1223,7 @@ GameObject:
   - component: {fileID: 834607780}
   - component: {fileID: 834607779}
   m_Layer: 5
-  m_Name: Stage
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1601,6 +1625,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelPanel: {fileID: 142528677}
+  Level: {fileID: 834607780}
+  LevelRewardText: {fileID: 759377905}
+  Levels:
+  - {fileID: 21300000, guid: c49d061792ca2824ba4b2e3376335b3a, type: 3}
+  - {fileID: 21300000, guid: ba1616109717c014da2b02fde9dae702, type: 3}
+  - {fileID: 21300000, guid: 5a7e6a2e417e1a44395ed8ce6161a9a7, type: 3}
+  - {fileID: 21300000, guid: a94295d428cfe0b4dbd3d19ae42fa3e4, type: 3}
+  - {fileID: 21300000, guid: e2c2518dfe0f917458d1d91aeb02d369, type: 3}
 --- !u!4 &861229160
 Transform:
   m_ObjectHideFlags: 0
@@ -2025,7 +2057,7 @@ GameObject:
   - component: {fileID: 1933501598}
   - component: {fileID: 1933501597}
   m_Layer: 5
-  m_Name: StageNextButton
+  m_Name: LevelNextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2093,7 +2125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1933501598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 861229159}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1933501598
 MonoBehaviour:
   m_ObjectHideFlags: 0

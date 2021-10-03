@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator EnemySpawn()
     {
-      while(spawnCounter < GameData.MAX_ENEMY[PlayerData.SelectedStage - 1])
+      while(spawnCounter < GameData.MAX_ENEMY_SPAWN[PlayerData.SelectedStage - 1])
       {
         yield return new WaitForSeconds(SpawnTimeFactor);
 
