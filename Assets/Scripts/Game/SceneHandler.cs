@@ -26,4 +26,11 @@ public class SceneHandler : MonoBehaviour
 		GameData.MainMenuCanvas.gameObject.SetActive(true);
 		Debug.Log("... Restart");
 	}
+
+
+	public void UponRestart()
+	{
+		GameData.UponRestart();
+		PlayerData.UponRestart();
+	}
 }

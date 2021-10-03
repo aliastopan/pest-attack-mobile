@@ -5,8 +5,6 @@ using UnityEngine;
 public class Deck : MonoBehaviour
 {
     public List<GameObject> LockableTraps = new List<GameObject>();
-    // Start is called before the first frame update
-    public int Level = 0;
 
     private void Start() 
     {
@@ -18,7 +16,7 @@ public class Deck : MonoBehaviour
     }
     private void Update() 
     {
-        for (int i = 0; i <= Level; i++)
+        for (int i = 0; i <= GameData.SELECTED_STAGE; i++)
         {
             Debug.LogWarning($"Unlocked: {i}");
             UnlockTrap(i);
@@ -30,8 +28,7 @@ public class Deck : MonoBehaviour
         GameObject trap = LockableTraps[index];
         trap.GetComponent<DeckedCard>().enabled = true;
         trap.transform.GetChild(0).gameObject.SetActive(false);
-        //LockableTraps[index].GetComponent<DeckedCard>().enabled = true;
-        //LockableTraps[index].gameObject.getChild
+
     }
 
 }

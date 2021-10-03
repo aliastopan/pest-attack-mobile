@@ -21,5 +21,13 @@ public static class GameData
   public static int[] TrapRank = new int[] {1, 1, 1, 1, 1, 1, 1};
   public static int SELECTED_STAGE = 0;
 
+  public static int ENEMY_KILLED = 0;
+
+
+  public static void UponRestart()
+	{
+	  ENEMY_KILLED = 0;
+	}
+
 
 }

@@ -55,7 +55,7 @@ public class Trap : MonoBehaviour
         OnDead();
     }
 
-    private void OnDead()
+    public virtual void OnDead()
     {
         if (HealthPoint <= 0)
         {
@@ -65,7 +65,7 @@ public class Trap : MonoBehaviour
         }
     }
 
-    private void Battle()
+    public virtual void Battle()
     {
         if(Targets.Count == 0)
             clock = null;

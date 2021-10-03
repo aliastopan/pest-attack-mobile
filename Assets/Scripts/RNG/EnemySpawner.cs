@@ -13,7 +13,9 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnCounter = GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE];
         StartCoroutine(EnemySpawn());
+        Debug.Log($"Total Enemy: {spawnCounter}");
         
     }
 
