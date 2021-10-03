@@ -3839,10 +3839,10 @@ MonoBehaviour:
   RootSpawn: {fileID: 405792068}
   Enemies:
   - {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
-  - {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
-  - {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
-  - {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
-  - {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+  - {fileID: 7753560167612643151, guid: ae771edc8c3976e4c9fa5940a0a5abb6, type: 3}
+  - {fileID: 8649474466366114518, guid: af8baaaa883e4a749b3228f2465961e6, type: 3}
+  - {fileID: 4698359222183509552, guid: f8a55eff8aa3cfb46b0fa4c31a7e4752, type: 3}
+  - {fileID: 3602381668525643431, guid: 44ec219e27173d7449d816dab687493e, type: 3}
 --- !u!1 &798522208
 GameObject:
   m_ObjectHideFlags: 0
@@ -7923,7 +7923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1402392746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8331,7 +8331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1457084640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9083,7 +9083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1702968783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10455,7 +10455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1959530959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10800,7 +10800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2038332643
 RectTransform:
   m_ObjectHideFlags: 0
