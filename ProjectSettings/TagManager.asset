@@ -10,6 +10,7 @@ TagManager:
   - Trap
   - Enemy
   - DEBUG
+  - Sawah
   layers:
   - Default
   - TransparentFX
