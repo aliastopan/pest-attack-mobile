@@ -10,9 +10,12 @@ public static class PlayerData
     public static int CurrentStarPoint = 0;
     public static int SelectedStage = 1;
 
+    public static int CurrentEnemyKilled = 0;
+
     public static void UponRestart()
     {
         LifePoint = 3;
         CurrentTaelPoint = 0;
+        CurrentEnemyKilled = 0;
     }
 }
