@@ -8,11 +8,17 @@ public class RiceField : MonoBehaviour
 
     private void Update() 
     {
-        Debug.LogWarning($"Enemy {EnemyCounter}/{GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");    
+        Debug.LogWarning($"Enemy {EnemyCounter}/{GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");  
+        if(EnemyCounter == GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE])
+        {
+            Debug.LogWarning($"GAME OVER");
+        }  
     }
-    private void OnTriggerEnter(Collider collision) 
-    {
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {    
+        Debug.LogWarning($"Hit");
         if(collision.gameObject.tag == "Enemy")
             EnemyCounter++;
     }
+
 }
