@@ -14,6 +14,9 @@ public class HelpPanel : MonoBehaviour
     {
         HelpSprite.GetComponent<Image>().sprite = Helps[HelpIndex].Illustration;
         HelpText.text = Helps[HelpIndex].Description;
+
+        Debug.LogWarning($"Help Index: {HelpIndex}");
+
     }
 
     public void NextHelp()
