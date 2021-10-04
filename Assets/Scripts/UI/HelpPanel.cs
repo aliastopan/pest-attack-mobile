@@ -21,7 +21,7 @@ public class HelpPanel : MonoBehaviour
 
     public void NextHelp()
     {
-        if(HelpIndex < Helps.Count)
+        if(HelpIndex < Helps.Count - 1)
             HelpIndex++;
         else
             HelpIndex = 0;
@@ -29,7 +29,7 @@ public class HelpPanel : MonoBehaviour
 
     public void PrevHelp()
     {
-        if(HelpIndex < 0)
+        if(HelpIndex < 1)
             HelpIndex--;
         else
             HelpIndex = Helps.Count;
