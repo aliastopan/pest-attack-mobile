@@ -8,16 +8,27 @@ public class MainMenuManager : MonoBehaviour
     [Header("Panel")]
     public GameObject LevelPanel;
     public Image Level;
+
+
     public Text LevelRewardText;
     [Header("Level")]
     public List<Sprite> Levels = new List<Sprite>();
+
+    [Header("Inner Panel")]
+    public GameObject ShopPanel;
+    public GameObject BantuanPanel;
+    public GameObject KoleksiPanel;
 
     private void Awake() 
     {
         LevelPanel.SetActive(false);   
         Level.sprite = Levels[0];
 
+        ShopPanel.SetActive(false);
+        BantuanPanel.SetActive(false);   
+        KoleksiPanel.SetActive(false);   
     }
+
 
     private void Update() 
     {
@@ -47,6 +58,40 @@ public class MainMenuManager : MonoBehaviour
             GameData.SELECTED_STAGE++;
         else
             GameData.SELECTED_STAGE = 0;
+    }
+        // BANTUAN
+    public void OpenBantuanPanel()
+    {
+        BantuanPanel.SetActive(true);
+
+    }
+
+    public void CloseBantuanPanel()
+    {
+        BantuanPanel.SetActive(false);
+        
+    }
+
+    // KOLEKSI
+    public void OpenKoleksiPanel()
+    {
+        KoleksiPanel.SetActive(true);
+    }
+
+    public void CloseKoleksiPanel()
+    {
+        KoleksiPanel.SetActive(false);
+    }
+
+    // SHOP
+    public void OpenShopPanel()
+    {
+        ShopPanel.SetActive(true);
+    }
+
+    public void CloseShopPanel()
+    {
+        ShopPanel.SetActive(false);
     }
     
 

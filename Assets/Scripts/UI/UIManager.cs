@@ -71,7 +71,6 @@ public class UIManager : MonoBehaviour
     {
         PauseGame();
         WinScreen.SetActive(true);
-
     }
 
     public void GameOver()
@@ -80,6 +79,9 @@ public class UIManager : MonoBehaviour
         GameOverScreen.SetActive(true);
 
     }
+
+
+
 
     public void OpenPauseScreen()
     {
