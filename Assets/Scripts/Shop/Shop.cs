@@ -5,11 +5,11 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public GameObject PrefabsAirSabun;
-    public DeckedCard PrefabsJaring;
-    public DeckedCard PrefabsPlastik;
-    public DeckedCard PrefabsBebek;
-    public DeckedCard PrefabBurung;
-    public DeckedCard PrefabUlar;
+    public GameObject PrefabsJaring;
+    public GameObject PrefabsPlastik;
+    public GameObject PrefabsBebek;
+    public GameObject PrefabBurung;
+    public GameObject PrefabUlar;
 
     /*
     public void UpgradeAirSabun()
