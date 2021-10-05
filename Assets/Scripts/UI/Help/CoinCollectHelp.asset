@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CoinCollectHelp
   m_EditorClassIdentifier: 
   Illustration: {fileID: 21300000, guid: 91c33c7d0b2b85641adbd731b058349b, type: 3}
-  Description: COIN COLLECT
+  Description: Kamu harus mengambil COIN dan mungumpulkannya untuk ,e,beli TRAP

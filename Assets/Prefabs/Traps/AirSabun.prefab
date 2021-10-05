@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrapStats: {fileID: 11400000, guid: ee07dfacd8cd993419e1b77fa9a4ab0f, type: 2}
   TrapType: 0
+  CardType: 1
   Cost: 100
   HealthPoint: 100
   AttackPoint: 15

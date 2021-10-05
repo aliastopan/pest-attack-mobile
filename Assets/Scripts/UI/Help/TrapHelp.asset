@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TrapHelp
   m_EditorClassIdentifier: 
   Illustration: {fileID: 21300000, guid: 8ad1f4d580fc06048a0801261e145133, type: 3}
-  Description: COIN COLLECT
+  Description: 

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public enum TrapType
 {
   Shooter,
@@ -14,6 +13,7 @@ public class Trap : MonoBehaviour
 {
     public TrapStats TrapStats;
     public TrapType TrapType;
+    public CardType CardType;
     public float Cost; // = 50f;
     public float HealthPoint; // = 100f;
     public float AttackPoint; // = 100f;
@@ -27,7 +27,7 @@ public class Trap : MonoBehaviour
 
     public virtual void Start() 
     {
-        int rank = GameData.TrapRank[(int) TrapType];
+        int rank = GameData.TrapRank[(int) CardType];
 
         if(TrapStats != null && TrapStats.StatsByRank.Count > 0)
         {
@@ -37,16 +37,6 @@ public class Trap : MonoBehaviour
             AttackCooldown = TrapStats.StatsByRank[rank-1].AttackCooldown;
             DebuffSpeed = TrapStats.StatsByRank[rank-1].DebuffSpeed;
         }
-
-        /*
-        Debug.Log($"{this.gameObject.name} rank: {rank}, available rank: {TrapStats.StatsByRank.Count}");
-        Debug.Log($"COST: {Cost}");
-        Debug.Log($"ATK: {AttackPoint}");
-        Debug.Log($"HP: {HealthPoint}");
-        Debug.Log($"CD: {AttackCooldown}");
-        Debug.Log($"DEBUFF: {DebuffSpeed}");
-        */
-
     }
 
     public virtual void Update()
@@ -76,7 +66,6 @@ public class Trap : MonoBehaviour
             TimeDebug = (float) System.Math.Round(clock.t, 2);
             if (clock.t == 0)
             {
-                //Debug.LogWarning($"[{this.gameObject.name}] Attacking {clock.t}");
                 foreach (GameObject target in Targets)
                 {
                     try

@@ -10,9 +10,13 @@ public class Projectile : MonoBehaviour
 
     private void Start() 
     {
-        //int rank = GameData.TrapRank[(int) TrapType];
+        int rank = GameData.TrapRank[(int) CardType.AirSabun];
+        
+        if(TrapStats != null && TrapStats.StatsByRank.Count > 0)
+        {
+            
+        }
         /*
-
         if(TrapStats != null && TrapStats.StatsByRank.Count > 0)
         {
             Cost = TrapStats.StatsByRank[rank-1].Cost;

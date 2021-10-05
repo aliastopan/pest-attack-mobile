@@ -15,24 +15,36 @@ public class HelpPanel : MonoBehaviour
         HelpSprite.GetComponent<Image>().sprite = Helps[HelpIndex].Illustration;
         HelpText.text = Helps[HelpIndex].Description;
 
-        Debug.LogWarning($"Help Index: {HelpIndex}");
-
+        //Debug.LogWarning($"Help Index: {HelpIndex}");
+        if(HelpIndex < 0)
+            HelpIndex = 0;
     }
 
     public void NextHelp()
     {
         if(HelpIndex < Helps.Count - 1)
+        {
             HelpIndex++;
+            Debug.LogWarning($"Help Index: {HelpIndex}");
+
+        }
         else
             HelpIndex = 0;
     }
 
     public void PrevHelp()
     {
-        if(HelpIndex < 1)
+        if(HelpIndex > 1)
+        {
             HelpIndex--;
+            Debug.LogWarning($"Help Index: {HelpIndex}");
+        }
         else
-            HelpIndex = Helps.Count;
+        {
+            Debug.LogWarning($"Index Before: {HelpIndex}");
+            HelpIndex = Helps.Count - 1;
+            Debug.LogWarning($"Index After: {HelpIndex}");
+        }
     }
 
 
