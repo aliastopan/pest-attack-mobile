@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CoinAmountHelp
   m_EditorClassIdentifier: 
   Illustration: {fileID: 21300000, guid: 108051796a38d514ba8f9f0702223209, type: 3}
-  Description: COIN AMOUNT
+  Description: Ini hasil pengumpulan COIN. Kamu harus menggunakan COIN ini untuk
+    membeli TRAP sesuai dengan harganya.

@@ -7,7 +7,7 @@ public class CollectionPanel : MonoBehaviour
 {
     public GameObject CollectionSprite;
     public Text CollectionText; 
-    public List<Help> Collections = new List<Help>();
+    public List<Collection> Collections = new List<Collection>();
     public int CollectionIndex = 0;
 
     private void Update() 
@@ -20,7 +20,7 @@ public class CollectionPanel : MonoBehaviour
             CollectionIndex = 0;
     }
 
-    public void NextHelp()
+    public void NextCollection()
     {
         if(CollectionIndex < Collections.Count - 1)
         {
@@ -30,7 +30,7 @@ public class CollectionPanel : MonoBehaviour
             CollectionIndex = 0;
     }
 
-    public void PrevHelp()
+    public void PrevCollection()
     {
         if(CollectionIndex > 1)
         {

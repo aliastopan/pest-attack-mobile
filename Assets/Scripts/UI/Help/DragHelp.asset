@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8bfe36848574314d9609558eb52308a, type: 3}
-  m_Name: CoinCollectHelp
+  m_Name: DragHelp
   m_EditorClassIdentifier: 
-  Illustration: {fileID: 21300000, guid: 91c33c7d0b2b85641adbd731b058349b, type: 3}
-  Description: Kamu harus mengambil dan mengumpulkan COIN untuk membeli TRAP.
+  Illustration: {fileID: 21300000, guid: e77c971fa6158d044903430e7dcfc94c, type: 3}
+  Description: Pasanglah Trap kamu sesuai dengan warna merah yang sudah ditandai
+    pada arena.

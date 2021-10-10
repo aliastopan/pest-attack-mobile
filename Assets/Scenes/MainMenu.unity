@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9923763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 861229159}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: OpenKoleksiPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9923763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &142528678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -736,8 +748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.89, y: -113.28}
-  m_SizeDelta: {x: 590.51, y: 96.07}
+  m_AnchoredPosition: {x: 2, y: -150}
+  m_SizeDelta: {x: 590.51, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &357670563
 MonoBehaviour:
@@ -909,7 +921,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 861229159}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: CloseLevelPanel
+        m_MethodName: CloseKoleksiPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1747,8 +1759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 250}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760980850
 MonoBehaviour:
@@ -2839,9 +2851,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1758678163}
-        m_TargetAssemblyTypeName: HelpPanel, Assembly-CSharp
-        m_MethodName: NextHelp
+      - m_Target: {fileID: 1858341986}
+        m_TargetAssemblyTypeName: CollectionPanel, Assembly-CSharp
+        m_MethodName: PrevCollection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2971,9 +2983,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1758678163}
-        m_TargetAssemblyTypeName: HelpPanel, Assembly-CSharp
-        m_MethodName: PrevHelp
+      - m_Target: {fileID: 1858341986}
+        m_TargetAssemblyTypeName: CollectionPanel, Assembly-CSharp
+        m_MethodName: NextCollection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3213,6 +3225,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4d9353e997032f4a9f01c9bf9179f45, type: 2}
   - {fileID: 11400000, guid: 055a1b6ad1f26554aa9df619c27c8ab7, type: 2}
   - {fileID: 11400000, guid: 075d34d070d77d74c9f24e48ed5ff7be, type: 2}
+  - {fileID: 11400000, guid: d8429ea7a9690c040aa0478b672897cb, type: 2}
   - {fileID: 11400000, guid: 98bbe8ddd0380bf4b874c3f4c5945e8f, type: 2}
   HelpIndex: 0
 --- !u!114 &1758678164
@@ -3611,7 +3624,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollectionSprite: {fileID: 1869735191}
   CollectionText: {fileID: 681132029}
-  Collections: []
+  Collections:
+  - {fileID: 11400000, guid: 84e8cfb4adf799041a201801c04abc44, type: 2}
+  - {fileID: 11400000, guid: 02bfcf72892d6c047875d023d8104d9e, type: 2}
+  - {fileID: 11400000, guid: 34dbd2c141e57ce4da7a830b2a932eeb, type: 2}
+  - {fileID: 11400000, guid: c64e680d6cb2f434a8a859127ff63113, type: 2}
+  - {fileID: 11400000, guid: 1bb52eae9f04983439f7bb0d97a43591, type: 2}
+  - {fileID: 11400000, guid: 15ac220698eb0c744874207eb9c4356c, type: 2}
   CollectionIndex: 0
 --- !u!1 &1869735191
 GameObject:
@@ -3648,8 +3667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 250}
+  m_AnchoredPosition: {x: 0, y: 25}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869735193
 MonoBehaviour:

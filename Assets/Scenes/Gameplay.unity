@@ -1578,6 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
+  CardType: 0
   Cost: 50
   HealthPoint: 50
   AttackPoint: 25
@@ -3742,6 +3743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
+  CardType: 0
   Cost: 50
   HealthPoint: 50
   AttackPoint: 25
@@ -4387,6 +4389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
+  CardType: 0
   Cost: 50
   HealthPoint: 50
   AttackPoint: 25
@@ -5454,6 +5457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
+  CardType: 0
   Cost: 50
   HealthPoint: 50
   AttackPoint: 25
@@ -8130,6 +8134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
+  CardType: 0
   Cost: 50
   HealthPoint: 50
   AttackPoint: 25

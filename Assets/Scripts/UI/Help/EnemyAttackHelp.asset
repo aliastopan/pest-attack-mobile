@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EnemyAttackHelp
   m_EditorClassIdentifier: 
   Illustration: {fileID: 21300000, guid: 1bb081dffb46e514e807372b43d17335, type: 3}
-  Description: TRAP
+  Description: Kamu harus melindungi Padi dari serangan para HAMA Gunakanlah TRAP
+    untuk menyerang para HAMA.
