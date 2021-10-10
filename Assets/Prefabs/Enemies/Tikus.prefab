@@ -158,5 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationPack: {fileID: 11400000, guid: d31a04ba827113b4fbb4d25f0adac3a9, type: 2}
+  defaultPack: {fileID: 11400000, guid: d31a04ba827113b4fbb4d25f0adac3a9, type: 2}
+  attackPack: {fileID: 11400000, guid: 8da38dc14c614384e86c099e1148ef08, type: 2}
   SecondsPerFrame: 0.25

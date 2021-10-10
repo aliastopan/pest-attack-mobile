@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6272746849968285250}
   - component: {fileID: 2201454784668158043}
   - component: {fileID: 7097256908044113622}
+  - component: {fileID: -5373534943204354590}
   m_Layer: 5
   m_Name: BurungHantu
   m_TagString: Trap
@@ -125,3 +126,18 @@ MonoBehaviour:
   DebuffSpeed: 0
   Targets: []
   TimeDebug: 0
+--- !u!114 &-5373534943204354590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562360681869828524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPack: {fileID: 11400000, guid: 14d4285cb450bce48bcf5b5a9e0fb3fe, type: 2}
+  attackPack: {fileID: 11400000, guid: fff4c0e2134b1564bb400b1f2bcc6e2c, type: 2}
+  SecondsPerFrame: 0.25

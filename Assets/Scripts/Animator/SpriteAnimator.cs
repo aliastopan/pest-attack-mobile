@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpriteAnimator : MonoBehaviour
 {
-    [SerializeField] private AnimationPack idlePack;
+    [SerializeField] private AnimationPack defaultPack;
     [SerializeField] private AnimationPack attackPack;
     private AnimationPack animationPack;
 
@@ -22,24 +23,25 @@ public class SpriteAnimator : MonoBehaviour
 
     private void Update() 
     {
+        sequencer.tCalibrate(SecondsPerFrame);
         sequencer.tLapseRepeat();
         if(sequencer.tValue() > 1)
         {
             Debug.Log($"Frame...");
-            if(currentFrame >= idlePack.FrameSeries.Length - 1)
+            if(currentFrame >= defaultPack.FrameSeries.Length - 1)
                 currentFrame = 0;
             else
                 currentFrame++;
         }
 
-
+        Play();
 
     }
 
     public void Play()
     {
-        SpriteRenderer actor = GetComponent<SpriteRenderer>(); 
-        actor.sprite = idlePack.FrameSeries[currentFrame];
+        Image actor = GetComponent<Image>(); 
+        actor.sprite = defaultPack.FrameSeries[currentFrame];
     }
 
 }

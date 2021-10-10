@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3602381668525643425}
   - component: {fileID: 4672181361742460527}
   - component: {fileID: -8115237943524105400}
+  - component: {fileID: 4487369430239036879}
   m_Layer: 5
   m_Name: BurungPipit
   m_TagString: Enemy
@@ -144,3 +145,19 @@ MonoBehaviour:
   SpeedFactor: 1
   IsBattle: 0
   Target: {fileID: 0}
+  TimeDebug: 0
+--- !u!114 &4487369430239036879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3602381668525643431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPack: {fileID: 11400000, guid: 9b1235f75bad11a498a6b8dce0994cff, type: 2}
+  attackPack: {fileID: 11400000, guid: 15a2eb6e959ee0c43960f77f1ef8278a, type: 2}
+  SecondsPerFrame: 0.25

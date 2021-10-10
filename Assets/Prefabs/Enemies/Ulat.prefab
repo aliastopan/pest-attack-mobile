@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8649474466366114512}
   - component: {fileID: 658031357126371870}
   - component: {fileID: -6887512893628550487}
+  - component: {fileID: -3057810037632421944}
   m_Layer: 5
   m_Name: Ulat
   m_TagString: Enemy
@@ -144,3 +145,19 @@ MonoBehaviour:
   SpeedFactor: 1
   IsBattle: 0
   Target: {fileID: 0}
+  TimeDebug: 0
+--- !u!114 &-3057810037632421944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649474466366114518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPack: {fileID: 11400000, guid: 508f99da504f0ca4e8d6e768d6eb06be, type: 2}
+  attackPack: {fileID: 11400000, guid: 867e74b15bc25434eb80823703521241, type: 2}
+  SecondsPerFrame: 0.25

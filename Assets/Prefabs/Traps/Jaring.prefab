@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6816785399901950112}
   - component: {fileID: 7655178412054903481}
   - component: {fileID: 8555009508422498973}
+  - component: {fileID: 7882827473185928417}
   m_Layer: 5
   m_Name: Jaring
   m_TagString: Trap
@@ -125,3 +126,18 @@ MonoBehaviour:
   DebuffSpeed: 0.5
   Targets: []
   TimeDebug: 0
+--- !u!114 &7882827473185928417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845183251096145680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPack: {fileID: 11400000, guid: 34a93fd93e296474bb680d2649d827ca, type: 2}
+  attackPack: {fileID: 11400000, guid: 3c84e0992491db2468edf5d4bf3c636f, type: 2}
+  SecondsPerFrame: 0.25

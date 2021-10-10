@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6732832929677440004}
   - component: {fileID: 8996570354770149718}
   - component: {fileID: 108459926066513589}
+  - component: {fileID: -1073047088460570117}
   m_Layer: 5
   m_Name: Ular
   m_TagString: Trap
@@ -125,3 +126,18 @@ MonoBehaviour:
   DebuffSpeed: 0
   Targets: []
   TimeDebug: 0
+--- !u!114 &-1073047088460570117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245725385918171978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPack: {fileID: 11400000, guid: 1ca7e57ce48f961409d72e12ccaaacca, type: 2}
+  attackPack: {fileID: 11400000, guid: e229e14f53e55eb4b99c74dc9b80b65f, type: 2}
+  SecondsPerFrame: 0.25

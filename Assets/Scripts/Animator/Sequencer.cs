@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Sequencer {
-    public float tMax { get; }
+    public float tMax { get; private set; }
     public float t = 0f;
     public float tError { get { return 0.05f; } }
     public bool CanBegin { get; set; }
@@ -31,4 +31,7 @@ public class Sequencer {
                 t = 0f;
         }
     }
+
+    public void tCalibrate(float t)
+        => tMax = t;
 }

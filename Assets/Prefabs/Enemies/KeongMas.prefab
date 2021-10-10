@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4698359222183509558}
   - component: {fileID: 3466430218567687928}
   - component: {fileID: 5595911672733840829}
+  - component: {fileID: 9067351676292721618}
   m_Layer: 5
   m_Name: KeongMas
   m_TagString: Enemy
@@ -144,3 +145,19 @@ MonoBehaviour:
   SpeedFactor: 1
   IsBattle: 0
   Target: {fileID: 0}
+  TimeDebug: 0
+--- !u!114 &9067351676292721618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698359222183509552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPack: {fileID: 11400000, guid: 020bfdee799993048acf4978fdc7fefd, type: 2}
+  attackPack: {fileID: 11400000, guid: c4f16482fa7f942479e12893c465f2f3, type: 2}
+  SecondsPerFrame: 0.25

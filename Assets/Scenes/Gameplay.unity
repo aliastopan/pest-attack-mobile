@@ -6363,7 +6363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1069585614
 Transform:
   m_ObjectHideFlags: 0
@@ -12222,8 +12222,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8060411731115027544, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: idlePack
+      value: 
+      objectReference: {fileID: 11400000, guid: d31a04ba827113b4fbb4d25f0adac3a9, type: 2}
+    - target: {fileID: 8060411731115027544, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: attackPack
+      value: 
+      objectReference: {fileID: 11400000, guid: d31a04ba827113b4fbb4d25f0adac3a9, type: 2}
+    - target: {fileID: 8060411731115027544, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: SecondsPerFrame
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
