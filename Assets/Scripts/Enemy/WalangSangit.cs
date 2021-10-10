@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class WalangSangit : Enemy
 {
-
+  public override void Update()
+  {
+    base.Move();
+    base.Update();
+  }
 }

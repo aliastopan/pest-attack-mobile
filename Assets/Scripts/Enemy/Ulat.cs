@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class Ulat : Enemy
 {
-
+  public override void Update()
+  {
+    base.Move();
+    base.Update();
+  }
 }

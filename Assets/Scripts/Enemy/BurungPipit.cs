@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class BurungPipit : Enemy
 {
-
+  public override void Update()
+  {
+    base.Move();
+    base.Update();
+  }
 }
