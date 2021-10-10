@@ -20,7 +20,7 @@ public class Trap : MonoBehaviour
     public float AttackCooldown; // = 2f;
     public float DebuffSpeed; // = 0.25f;
     public List<GameObject> Targets = new List<GameObject>(); 
-    private InternalClock clock;
+    protected InternalClock clock;
 
     [Header("Debug")]
     public float TimeDebug;

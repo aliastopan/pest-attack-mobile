@@ -27,7 +27,7 @@ public class SpriteAnimator : MonoBehaviour
         sequencer.tLapseRepeat();
         if(sequencer.tValue() > 1)
         {
-            Debug.Log($"Frame...");
+            //Debug.Log($"Frame...");
             if(currentFrame >= defaultPack.FrameSeries.Length - 1)
                 currentFrame = 0;
             else

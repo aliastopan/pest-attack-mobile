@@ -21,13 +21,12 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator EnemySpawn()
     {
-      Debug.Log($"Spawn : {spawnCounter < GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
-      Debug.Log($"counter: {spawnCounter}, enemy: {GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
+      //Debug.Log($"Spawn : {spawnCounter < GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
+      //Debug.Log($"counter: {spawnCounter}, enemy: {GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
       while(spawnCounter < GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE])
       {
         yield return new WaitForSeconds(SpawnTimeFactor);
-        Debug.Log($"Spawn");
-
+        //Debug.Log($"Spawn");
 
         int rngEnemies = new System.Random().Next(0, GameData.SELECTED_STAGE);
         int rngSpawnPoint = new System.Random().Next(0, 4);

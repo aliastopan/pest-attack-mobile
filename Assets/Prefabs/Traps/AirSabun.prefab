@@ -126,6 +126,8 @@ MonoBehaviour:
   DebuffSpeed: 0
   Targets: []
   TimeDebug: 0
+  Projectile: {fileID: 1121511714287767030, guid: dea180c01ddf6f049b04f6b18b9159a7, type: 3}
+  ProjectileDamage: 0
 --- !u!114 &1910151239089632395
 MonoBehaviour:
   m_ObjectHideFlags: 0
