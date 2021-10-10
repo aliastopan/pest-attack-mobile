@@ -5058,14 +5058,17 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 98da5bf0844d8764389e277d3f7d8707, type: 3}
     Volume: 1
     Pitch: 1
+    Source: {fileID: 0}
   - Name: Attack
     Clip: {fileID: 8300000, guid: 4a1dd5b31daac66429eaec182d615563, type: 3}
     Volume: 1
     Pitch: 1
+    Source: {fileID: 0}
   - Name: Dead
     Clip: {fileID: 8300000, guid: b47286bcff3702f4d89bfb87132e13b7, type: 3}
     Volume: 1
     Pitch: 1
+    Source: {fileID: 0}
 --- !u!1 &852869923
 GameObject:
   m_ObjectHideFlags: 0
@@ -6360,7 +6363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1069585614
 Transform:
   m_ObjectHideFlags: 0
@@ -12217,6 +12220,10 @@ PrefabInstance:
     - target: {fileID: 6761527876177307733, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060411731115027544, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: SecondsPerFrame
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6761527876177307732}
   - component: {fileID: 3241768181785069722}
   - component: {fileID: -870199958568423856}
+  - component: {fileID: 8060411731115027544}
   m_Layer: 5
   m_Name: Tikus
   m_TagString: Enemy
@@ -144,3 +145,18 @@ MonoBehaviour:
   SpeedFactor: 1
   IsBattle: 0
   Target: {fileID: 0}
+  TimeDebug: 0
+--- !u!114 &8060411731115027544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761527876177307730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fca56dc1cdf7454f9a2f57fd9f79889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationPack: {fileID: 11400000, guid: d31a04ba827113b4fbb4d25f0adac3a9, type: 2}
+  SecondsPerFrame: 0.25
