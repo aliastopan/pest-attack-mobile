@@ -11454,7 +11454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2074862017
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11965,6 +11965,10 @@ PrefabInstance:
     - target: {fileID: 1121511714287767030, guid: dea180c01ddf6f049b04f6b18b9159a7, type: 3}
       propertyPath: m_Name
       value: AirSabunProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121511714287767030, guid: dea180c01ddf6f049b04f6b18b9159a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dea180c01ddf6f049b04f6b18b9159a7, type: 3}

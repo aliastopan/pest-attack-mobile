@@ -14,11 +14,11 @@ public class Trap : MonoBehaviour
     public TrapStats TrapStats;
     public TrapType TrapType;
     public CardType CardType;
-    public float Cost; // = 50f;
-    public float HealthPoint; // = 100f;
-    public float AttackPoint; // = 100f;
-    public float AttackCooldown; // = 2f;
-    public float DebuffSpeed; // = 0.25f;
+    [HideInInspector] public float Cost; // = 50f;
+    [HideInInspector] public float HealthPoint; // = 100f;
+    [HideInInspector] public float AttackPoint; // = 100f;
+    [HideInInspector] public float AttackCooldown; // = 2f;
+    [HideInInspector] public float DebuffSpeed; // = 0.25f;
     public List<GameObject> Targets = new List<GameObject>(); 
     protected InternalClock clock;
 

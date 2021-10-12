@@ -21,9 +21,14 @@ public class Projectile : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Debug.LogWarning($"Hit");
+            Debug.LogWarning($"Hit {AttackPoint}");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
+            Debug.Log($"HP: {enemy.HealthPoint}");
             enemy.HealthPoint -= AttackPoint;
+            Debug.Log($"hit HP: {enemy.HealthPoint}");
+
+      
         }
     }
 
