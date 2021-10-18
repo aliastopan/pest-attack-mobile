@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -19,10 +20,45 @@ public class Enemy : MonoBehaviour
 
     [Header("Debug")]
     public float TimeDebug;
+    private AnimationCurve curve;
+
+
+    private Image baseImage;
+    private Color defaultColor;
+    private Color hitColor = Color.red;
+    private Sequencer hitSequence;
+
+
+    public virtual void Start() 
+    {
+        baseImage = this.gameObject.GetComponent<Image>();
+        defaultColor =  baseImage.color;;    
+        hitSequence = new Sequencer(0.5f);
+        curve = ObjectMaster.Instance.BounceCurve;
+    }
+ 
     public virtual void Update()
     {
         Battle();
         OnDead();
+
+        hitSequence.tLapseOnce();
+
+        Color lerpColor = Color.Lerp(
+            defaultColor,
+            hitColor,
+            curve.Evaluate(hitSequence.tValue())
+        );
+
+        baseImage.color = lerpColor;
+        Debug.LogWarning($"t Value = {hitSequence.tValue()}");
+    }
+
+    public void BeingDamaged()
+    {
+        //Debug.LogWarning($"Damage Sequence.");
+        hitSequence.tReset();
+        hitSequence.Start();
     }
 
     private void OnDead()

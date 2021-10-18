@@ -19,14 +19,19 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if(collision.gameObject.tag == "Enemy")
+        bool isWalangSangit = collision.gameObject.GetComponent<Enemy>() is WalangSangit;
+        bool isUlat = collision.gameObject.GetComponent<Enemy>() is Ulat; 
+        bool isTarget = isWalangSangit || isUlat;
+
+        if(collision.gameObject.tag == "Enemy" && isTarget)
         {
-            Debug.LogWarning($"Hit {AttackPoint}");
+            //WDebug.LogWarning($"Hit {AttackPoint}");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             Debug.Log($"HP: {enemy.HealthPoint}");
             enemy.HealthPoint -= AttackPoint;
-            Debug.Log($"hit HP: {enemy.HealthPoint}");
+            enemy.BeingDamaged();
+            Debug.Log($"hit HP: {enemy.GetType()} {enemy.HealthPoint}");
 
       
         }

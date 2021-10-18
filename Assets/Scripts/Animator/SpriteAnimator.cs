@@ -18,7 +18,7 @@ public class SpriteAnimator : MonoBehaviour
     private void Start() 
     {
         sequencer = new Sequencer(SecondsPerFrame);
-        sequencer.InitiateStart();
+        sequencer.Start();
     }
 
     private void Update() 

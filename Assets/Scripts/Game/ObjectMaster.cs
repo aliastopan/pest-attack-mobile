@@ -8,6 +8,8 @@ public class ObjectMaster : MonoBehaviour
     public Color DefaultColor;
     public Color ToDropColor;
 
+    public AnimationCurve BounceCurve;
+
     public static ObjectMaster Instance;
 
     public Canvas Canvas;

@@ -10,7 +10,7 @@ public class Sequencer {
     public Sequencer(float tMax)
         => this.tMax = tMax;
 
-    public void InitiateStart()
+    public void Start()
         => CanBegin = true;
 
     public float tValue() => (t - 0f)/(tMax - 0f); 
@@ -21,6 +21,18 @@ public class Sequencer {
             t += Time.deltaTime;
     }    
 
+    public void tLapseOnce()
+    {
+        if(!IsFinished && CanBegin)
+            t += Time.deltaTime;
+        
+        if(IsFinished)
+        {
+            CanBegin = false;
+            tReset();
+        }
+    }
+
     public void tLapseRepeat()
     {
         if(CanBegin)
@@ -28,7 +40,7 @@ public class Sequencer {
             if(!IsFinished)
                 t += Time.deltaTime;
             else
-                t = 0f;
+                tReset();
         }
     }
 

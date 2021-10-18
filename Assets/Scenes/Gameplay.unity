@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3602381668525643431, guid: 44ec219e27173d7449d816dab687493e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44ec219e27173d7449d816dab687493e, type: 3}
@@ -2500,6 +2500,39 @@ MonoBehaviour:
   DeckSlot: 00000000010000000200000003000000040000000500000006000000
   DefaultColor: {r: 1, g: 1, b: 1, a: 0}
   ToDropColor: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
+  BounceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0.020049753
+      outSlope: 0.020049753
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2352941
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   Canvas: {fileID: 990403027}
   Camera: {fileID: 519420031}
 --- !u!114 &436954023
@@ -6227,7 +6260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1069585614
 Transform:
   m_ObjectHideFlags: 0
@@ -11907,7 +11940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8649474466366114518, guid: af8baaaa883e4a749b3228f2465961e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af8baaaa883e4a749b3228f2465961e6, type: 3}
@@ -12100,7 +12133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6761527876177307730, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6761527876177307733, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: m_Pivot.x
@@ -12186,6 +12219,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6761527876177307735, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761527876177307735, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761527876177307735, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8060411731115027544, guid: 9b37aecc9a3103f409566e6c479cc9b3, type: 3}
       propertyPath: idlePack
       value: 
@@ -12213,7 +12258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4698359222183509552, guid: f8a55eff8aa3cfb46b0fa4c31a7e4752, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4698359222183509559, guid: f8a55eff8aa3cfb46b0fa4c31a7e4752, type: 3}
       propertyPath: m_Pivot.x
