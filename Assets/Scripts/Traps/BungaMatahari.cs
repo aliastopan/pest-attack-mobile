@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Ular : Trap
+public class BungaMatahari : Trap
 {
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        bool isTikus = collision.gameObject.GetComponent<Enemy>() is Tikus;
-        bool isTarget = isTikus;
+        bool isBurungPipit = collision.gameObject.GetComponent<Enemy>() is BurungPipit;
+        bool isTarget = isBurungPipit;
 
         if(collision.gameObject.tag == "Enemy" && isTarget)
         {
