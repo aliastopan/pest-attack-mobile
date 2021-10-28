@@ -1579,7 +1579,7 @@ MonoBehaviour:
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
   CardType: 0
-  Cost: 50
+  Cost: 0
   HealthPoint: 50
   AttackPoint: 25
   AttackCooldown: 2
@@ -3565,7 +3565,7 @@ MonoBehaviour:
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
   CardType: 0
-  Cost: 50
+  Cost: 0
   HealthPoint: 50
   AttackPoint: 25
   AttackCooldown: 2
@@ -4211,7 +4211,7 @@ MonoBehaviour:
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
   CardType: 0
-  Cost: 50
+  Cost: 0
   HealthPoint: 50
   AttackPoint: 25
   AttackCooldown: 2
@@ -5338,7 +5338,7 @@ MonoBehaviour:
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
   CardType: 0
-  Cost: 50
+  Cost: 0
   HealthPoint: 50
   AttackPoint: 25
   AttackCooldown: 2
@@ -8014,7 +8014,7 @@ MonoBehaviour:
   TrapStats: {fileID: 11400000, guid: b3daefbc0200b3e4aaf2e166256eb997, type: 2}
   TrapType: 2
   CardType: 0
-  Cost: 50
+  Cost: 0
   HealthPoint: 50
   AttackPoint: 25
   AttackCooldown: 2
@@ -11940,7 +11940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7753560167612643151, guid: ae771edc8c3976e4c9fa5940a0a5abb6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae771edc8c3976e4c9fa5940a0a5abb6, type: 3}

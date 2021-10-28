@@ -50,8 +50,13 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(PlayerData.CurrentTaelPoint >= (int) DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
+        DraggableCard draggableCard = DraggableCard.GetComponent<DraggableCard>();
+        Trap trap = draggableCard.GetComponent<Trap>();
+        if(PlayerData.CurrentTaelPoint >= (int) trap.Cost)
+        {
             draggableInstance = Instantiate(DraggableCard, this.transform);
+            PlayerData.CurrentTaelPoint -= trap.Cost;
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)

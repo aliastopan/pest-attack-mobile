@@ -8,7 +8,7 @@ public class TrapStats : ScriptableObject
     [System.Serializable]
     public class Stats
     {
-        public float Cost = 50f;
+        public int Cost = 50;
         public float HealthPoint = 100f;
         public float AttackPoint = 100f;
         public float AttackCooldown = 2f;

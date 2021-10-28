@@ -13,7 +13,7 @@ public class Trap : MonoBehaviour
     public TrapStats TrapStats;
     public TrapType TrapType;
     public CardType CardType;
-    [HideInInspector] public float Cost; // = 50f;
+    [HideInInspector] public int Cost; // = 50f;
     [HideInInspector] public float HealthPoint; // = 100f;
     [HideInInspector] public float AttackPoint; // = 100f;
     [HideInInspector] public float AttackCooldown; // = 2f;
