@@ -20,9 +20,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Shop Element")]
     public Text RankAirSabunText;
-    public Text RankJaringText;
-    public Text RankPlastikText;
-
+    public Text RankBungaMatahariText;
     public Text RankBebekText;
     public Text RankBurungHantuText;
     public Text RankUlarText;
@@ -50,12 +48,11 @@ public class UIManager : MonoBehaviour
         collectableText.text = $"{PlayerData.CurrentTaelPoint}";
         lifePointText.text = $"{PlayerData.LifePoint}";     
 
-        RankAirSabunText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]}";
-        RankJaringText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Jaring]]}";   
-        RankPlastikText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Plastik]]}";   
-        RankBebekText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]]}";   
-        RankBurungHantuText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]]}";   
-        RankUlarText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]}";   
+        //RankAirSabunText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]}";
+        //RankBungaMatahariText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]]}";   
+        //RankBebekText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]]}";   
+        //RankBurungHantuText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]]}";   
+        //RankUlarText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]}";   
 
 
         Debug.LogWarning($"Enemy Killed: {PlayerData.CurrentEnemyKilled}/{GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
@@ -79,9 +76,6 @@ public class UIManager : MonoBehaviour
         GameOverScreen.SetActive(true);
 
     }
-
-
-
 
     public void OpenPauseScreen()
     {

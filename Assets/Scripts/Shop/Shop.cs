@@ -26,16 +26,10 @@ public class Shop : MonoBehaviour
             GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]++;
     }
 
-    public void UpgradeJaring()
+    public void UpgradeBungaMatahari()
     {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Jaring]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Jaring]]++;
-    }
-
-    public void UpgradePlastik()
-    {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Plastik]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Plastik]]++;
+        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]] < 3)
+            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]]++;
     }
 
     public void UpgradeBebek()

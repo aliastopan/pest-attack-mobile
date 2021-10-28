@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980b6d6e5c5f51d4ebd699bda23d930a, type: 3}
+  m_Name: BungaMatahariStats
+  m_EditorClassIdentifier: 
+  StatsByRank:
+  - Cost: 75
+    HealthPoint: 5000
+    AttackPoint: 25
+    AttackCooldown: 1
+    DebuffSpeed: 1
+    UpgradeCost: 35
+  - Cost: 100
+    HealthPoint: 5000
+    AttackPoint: 50
+    AttackCooldown: 1
+    DebuffSpeed: 1
+    UpgradeCost: 35
+  - Cost: 125
+    HealthPoint: 5000
+    AttackPoint: 65
+    AttackCooldown: 1
+    DebuffSpeed: 1
+    UpgradeCost: 35

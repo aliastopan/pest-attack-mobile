@@ -51,12 +51,12 @@ public class Enemy : MonoBehaviour
         );
 
         baseImage.color = lerpColor;
-        Debug.LogWarning($"t Value = {hitSequence.tValue()}");
+        //Debug.LogWarning($"t Value = {hitSequence.tValue()}");
     }
 
     public void BeingDamaged()
     {
-        //Debug.LogWarning($"Damage Sequence.");
+        Debug.LogWarning($"Damage Sequence.");
         hitSequence.tReset();
         hitSequence.Start();
     }

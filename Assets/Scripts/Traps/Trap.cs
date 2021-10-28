@@ -71,6 +71,7 @@ public class Trap : MonoBehaviour
                     {
                         Enemy targetEnemy = target.GetComponent<Enemy>();
                         targetEnemy.HealthPoint -= AttackPoint;
+                        targetEnemy.BeingDamaged();
                     }
                     catch (System.Exception log)
                     {
