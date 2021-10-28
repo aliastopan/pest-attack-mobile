@@ -58,7 +58,7 @@ public class Trap : MonoBehaviour
         OnDead();
 
         hitSequence.tLapseOnce();
-        Debug.Log($"HitSeq: {hitSequence.tValue()}");
+        //Debug.Log($"HitSeq: {hitSequence.tValue()}");
 
         Color lerpColor = Color.Lerp(
             defaultColor,

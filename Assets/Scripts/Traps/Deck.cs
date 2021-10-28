@@ -16,9 +16,9 @@ public class Deck : MonoBehaviour
     }
     private void Update() 
     {
-        for (int i = 0; i < GameData.SELECTED_STAGE; i++)
+        for (int i = 0; i <= GameData.SELECTED_STAGE; i++)
         {
-            //Debug.LogWarning($"Unlocked: {i}");
+            Debug.LogWarning($"Unlocked: {i}");
             UnlockTrap(i);
         }
     }
