@@ -28,10 +28,10 @@ public class Projectile : MonoBehaviour
             //WDebug.LogWarning($"Hit {AttackPoint}");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
-            Debug.Log($"HP: {enemy.HealthPoint}");
+            //Debug.Log($"HP: {enemy.HealthPoint}");
             enemy.HealthPoint -= AttackPoint;
             enemy.BeingDamaged();
-            Debug.Log($"hit HP: {enemy.GetType()} {enemy.HealthPoint}");
+            //Debug.Log($"hit HP: {enemy.GetType()} {enemy.HealthPoint}");
 
       
         }

@@ -13,6 +13,8 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
     private GameObject draggableInstance;
     public GameObject DraggableCard;
 
+    private bool isDragging;
+
     private void Start()
     {
         objectMaster = ObjectMaster.Instance;
@@ -50,12 +52,10 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        DraggableCard draggableCard = DraggableCard.GetComponent<DraggableCard>();
-        Trap trap = draggableCard.GetComponent<Trap>();
-        if(PlayerData.CurrentTaelPoint >= (int) trap.Cost)
+        if(PlayerData.CurrentTaelPoint >= DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost)
         {
             draggableInstance = Instantiate(DraggableCard, this.transform);
-            PlayerData.CurrentTaelPoint -= trap.Cost;
+            isDragging = true;
         }
     }
 
@@ -66,18 +66,16 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         try{
             //draggableInstance.GetComponent<DraggableCard>().AvailableGrid != null && 
             bool isGridOpen = PlayerData.AvailableGrids == 1;
-            bool isCostSuffice = PlayerData.CurrentTaelPoint >= cost;
             bool isGridEmpty = draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform.childCount == 0; 
 
-            if(isGridOpen && isCostSuffice && isGridEmpty)
+            if(isGridOpen && isGridEmpty && isDragging)
             {
                 GameObject instance = draggableInstance.GetComponent<DraggableCard>().TrapCard;
                 Transform location = draggableInstance.GetComponent<DraggableCard>().AvailableGrid.transform;
                 GameObject trap = Instantiate(instance, location);
-                // Debug.Log($"Drop Available: {trap.name}");
-                //trap.name.Replace("(Clone)", ""); 
-                //PlayerData.CurrencyPoint -= cost;
-            
+                PlayerData.CurrentTaelPoint -= DraggableCard.GetComponent<DraggableCard>().TrapCard.GetComponent<Trap>().Cost;
+                isDragging = false;
+
             }
             else
             {

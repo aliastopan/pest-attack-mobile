@@ -56,8 +56,8 @@ public class Enemy : MonoBehaviour
 
     public void BeingDamaged()
     {
-        Debug.LogWarning($"Damage Sequence.");
-        hitSequence.tReset();
+       //Debug.LogWarning($"Damage Sequence.");
+       // hitSequence.tReset();
         hitSequence.Start();
     }
 
@@ -83,12 +83,13 @@ public class Enemy : MonoBehaviour
             TimeDebug = (float) System.Math.Round(clock.t, 2);
             if (clock.t == 0)
             {
-              //Debug.LogWarning($"Battle");
-              if(Target != null)
-              {
-                Trap targetTrap = Target.GetComponent<Trap>();
-                targetTrap.HealthPoint -= AttackPoint;
-              }
+                //if(Target != null)
+                //{
+                    Trap targetTrap = Target.GetComponent<Trap>();
+                    targetTrap.HealthPoint -= AttackPoint;
+                    targetTrap.BeingDamaged();
+                    Debug.LogWarning($"Battle");
+                //}
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum TrapType
 {
@@ -21,6 +22,14 @@ public class Trap : MonoBehaviour
     public List<GameObject> Targets = new List<GameObject>(); 
     protected InternalClock clock;
 
+    private Image baseImage;
+    private Color defaultColor;
+    private Color hitColor = Color.yellow;
+    private Sequencer hitSequence;
+    private AnimationCurve curve;
+
+
+
     [Header("Debug")]
     public float TimeDebug;
 
@@ -36,13 +45,37 @@ public class Trap : MonoBehaviour
             AttackCooldown = TrapStats.StatsByRank[rank-1].AttackCooldown;
             DebuffSpeed = TrapStats.StatsByRank[rank-1].DebuffSpeed;
         }
+
+        baseImage = this.gameObject.GetComponent<Image>();
+        defaultColor =  baseImage.color;;    
+        hitSequence = new Sequencer(0.5f);
+        curve = ObjectMaster.Instance.BounceCurve;
     }
 
     public virtual void Update()
     {
         Battle();
         OnDead();
+
+        hitSequence.tLapseOnce();
+        Debug.Log($"HitSeq: {hitSequence.tValue()}");
+
+        Color lerpColor = Color.Lerp(
+            defaultColor,
+            hitColor,
+            curve.Evaluate(hitSequence.tValue())
+        );
+
+        baseImage.color = lerpColor;
     }
+
+    public void BeingDamaged()
+    {
+        Debug.LogWarning($"Damage Sequence.");
+        hitSequence.tReset();
+        hitSequence.Start();
+    }
+
 
     public virtual void OnDead()
     {
