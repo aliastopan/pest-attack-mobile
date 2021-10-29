@@ -1,24 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public GameObject PrefabsAirSabun;
-    public GameObject PrefabsJaring;
-    public GameObject PrefabsPlastik;
-    public GameObject PrefabsBebek;
-    public GameObject PrefabBurung;
-    public GameObject PrefabUlar;
-
-    /*
-    public void UpgradeAirSabun()
+    public Text StarPointText;
+    public List<Text> TrapRank = new List<Text>();
+    public List<TrapStats> TrapStats = new List<TrapStats>();
+    
+    private void Update() 
     {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]] < 
-            PrefabsAirSabun.GetComponent<DeckedCard>().CardRank.Length )
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]++;
+        StarPointText.text = PlayerData.CurrentStarPoint.ToString();
+        if(TrapRank.Count > 0)
+        {
+            for(int i = 0; i < TrapRank.Count; i++)
+            {
+                int currentRank = GameData.TrapRank[i+1] - 1;
+                int upgradeCost = TrapStats[i].StatsByRank[currentRank].UpgradeCost;
+                string cost =   upgradeCost == 0 ? $"MAX" : $"{upgradeCost}";
+                string display = $"Rank: {GameData.TrapRank[i].ToString()} / ";
+                TrapRank[i].text = display + cost;
+            }
+        }
     }
-    */
 
     public void UpgradeAirSabun()
     {

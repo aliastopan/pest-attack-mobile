@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 327844972}
   - component: {fileID: 327844971}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BebekRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 420908391}
   - component: {fileID: 420908390}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AirSabuntRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3169,6 +3169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1238176224}
+  - component: {fileID: 1238176225}
   m_Layer: 5
   m_Name: Group
   m_TagString: Untagged
@@ -3200,6 +3201,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1238176225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238176223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a1d5b52fb8e964fb84062b1fcd5aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StarPointText: {fileID: 392693926}
+  TrapRank:
+  - {fileID: 420908390}
+  - {fileID: 1844446763}
+  - {fileID: 2106894317}
+  - {fileID: 327844971}
+  - {fileID: 1542398844}
+  TrapStats:
+  - {fileID: 11400000, guid: ee07dfacd8cd993419e1b77fa9a4ab0f, type: 2}
+  - {fileID: 11400000, guid: 8ae85b87c7e24454c9b4c35d91beeaab, type: 2}
+  - {fileID: 11400000, guid: 3a85800dd8e49ab47a8fe47160ac496f, type: 2}
+  - {fileID: 11400000, guid: 651a8f9652ecf2440b2a66fdabc6b5d8, type: 2}
+  - {fileID: 11400000, guid: 375b855f3ff9d674fb346b0a62b9daf6, type: 2}
 --- !u!1 &1258268228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,7 +3782,7 @@ GameObject:
   - component: {fileID: 1542398845}
   - component: {fileID: 1542398844}
   m_Layer: 5
-  m_Name: Text
+  m_Name: UlarRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4327,7 +4353,7 @@ GameObject:
   - component: {fileID: 1844446764}
   - component: {fileID: 1844446763}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BungaMatahariRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4969,7 +4995,7 @@ GameObject:
   - component: {fileID: 2106894318}
   - component: {fileID: 2106894317}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BurungHantuRankText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

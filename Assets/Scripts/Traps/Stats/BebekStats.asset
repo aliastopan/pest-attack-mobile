@@ -18,7 +18,7 @@ MonoBehaviour:
     AttackPoint: 40
     AttackCooldown: 5
     DebuffSpeed: 0
-    UpgradeCost: 35
+    UpgradeCost: 40
   - Cost: 125
     HealthPoint: 140
     AttackPoint: 60
@@ -30,4 +30,4 @@ MonoBehaviour:
     AttackPoint: 80
     AttackCooldown: 5
     DebuffSpeed: 0
-    UpgradeCost: 35
+    UpgradeCost: 0

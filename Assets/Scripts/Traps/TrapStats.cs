@@ -8,12 +8,12 @@ public class TrapStats : ScriptableObject
     [System.Serializable]
     public class Stats
     {
-        public int Cost = 50;
-        public float HealthPoint = 100f;
-        public float AttackPoint = 100f;
-        public float AttackCooldown = 2f;
-        public float DebuffSpeed = 0.25f;
-        public int UpgradeCost = 35;
+        public int Cost;
+        public float HealthPoint;
+        public float AttackPoint;
+        public float AttackCooldown;
+        public float DebuffSpeed;
+        public int UpgradeCost;
     }
     public List<Stats> StatsByRank = new List<Stats>();
 }

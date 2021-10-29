@@ -20,7 +20,6 @@ public static class GameData
   public static readonly int[] WIN_REWARD = new int[] {100, 150, 200, 300, 500};
   public static int[] TrapRank = new int[] {1, 1, 1, 1, 1, 1};
   public static int SELECTED_STAGE = 0;
-
   public static int ENEMY_KILLED = 0;
 
   
