@@ -1037,6 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainMenuCavas: {fileID: 463040291}
+  BGMSource: {fileID: 1571192704}
 --- !u!1 &419281233
 GameObject:
   m_ObjectHideFlags: 0
