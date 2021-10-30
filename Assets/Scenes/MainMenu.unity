@@ -585,7 +585,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 203046769}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238176225}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeBurungHantu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &203046769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,7 +2110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804169775}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238176225}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeUlar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &804169775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,7 +3145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1080534820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238176225}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeAirSabun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1080534820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3599,7 +3635,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1442265809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238176225}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeBungaMatahari
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1442265809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4293,7 +4341,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 861229159}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: CloseLevelPanel
+        m_MethodName: CloseShopPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4736,7 +4784,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1868429311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238176225}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeBebek
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1868429311
 MonoBehaviour:
   m_ObjectHideFlags: 0

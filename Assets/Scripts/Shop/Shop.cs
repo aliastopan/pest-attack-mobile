@@ -19,16 +19,20 @@ public class Shop : MonoBehaviour
                 int currentRank = GameData.TrapRank[i+1] - 1;
                 int upgradeCost = TrapStats[i].StatsByRank[currentRank].UpgradeCost;
                 string cost =   upgradeCost == 0 ? $"MAX" : $"{upgradeCost}";
-                string display = $"Rank: {GameData.TrapRank[i].ToString()} / ";
+                string display = $"Rank: {GameData.TrapRank[i+1].ToString()} / ";
                 TrapRank[i].text = display + cost;
             }
         }
     }
 
     public void UpgradeAirSabun()
-    {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]++;
+    {   
+        if(GameData.TrapRank[1] < 3) 
+            GameData.TrapRank[1]++;
+
+
+        //if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]] < 3)
+        //    GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]++;
     }
 
     public void UpgradeBungaMatahari()
