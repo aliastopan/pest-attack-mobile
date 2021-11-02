@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Debugger : MonoBehaviour
 {
-    private void Start() 
+    private void Start()
     {
         //SlotCheck();
     }
@@ -25,7 +25,8 @@ public class Debugger : MonoBehaviour
     private void Update()
     {
         RankCheck();
-    
+        Debug.Log($"This is Update.");
+
 
     }
 
