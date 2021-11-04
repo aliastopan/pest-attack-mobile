@@ -74,6 +74,7 @@ public class UIManager : MonoBehaviour
 
     public void GameWin()
     {
+        PlayerData.CurrentStarPoint += GameData.WIN_REWARD[GameData.SELECTED_STAGE];        
         PauseGame();
         WinScreen.SetActive(true);
     }
@@ -126,6 +127,5 @@ public class UIManager : MonoBehaviour
         PlayerData.UponRestart(); 
         SceneManager.LoadScene("Gameplay");
 	}
-
 
 }

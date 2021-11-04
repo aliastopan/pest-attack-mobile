@@ -15,7 +15,7 @@ MonoBehaviour:
   StatsByRank:
   - Cost: 0
     HealthPoint: 200
-    AttackPoint: 5
+    AttackPoint: 5000
     AttackCooldown: 1
     DebuffSpeed: 1
     UpgradeCost: 0
