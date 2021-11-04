@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -40,6 +42,7 @@ public class UIManager : MonoBehaviour
         ShopScreen.SetActive(false);
         GameOverScreen.SetActive(false);
         WinScreen.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -60,6 +63,11 @@ public class UIManager : MonoBehaviour
         {
             //Debug.Log($"WIN");
             GameWin();
+        }
+
+        if(PlayerData.LifePoint <= 0)
+        {
+            GameOver();
         }
 
     }
@@ -111,6 +119,13 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Retry()
+	{
+        GameOverScreen.SetActive(false);
+        Time.timeScale = 1;
+        PlayerData.UponRestart(); 
+        SceneManager.LoadScene("Gameplay");
+	}
 
 
 }

@@ -82,6 +82,11 @@ public class Trap : MonoBehaviour
         if (HealthPoint <= 0)
         {
             Debug.Log($"{this.gameObject.name} is DEAD.");
+            if(this.gameObject.tag == "Padi")
+            {
+                PlayerData.LifePoint--;    
+            }
+
             this.gameObject.GetComponent<Collider2D>().enabled = false;
             Destroy(this.gameObject);
         }
