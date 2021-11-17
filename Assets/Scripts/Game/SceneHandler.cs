@@ -23,13 +23,14 @@ public class SceneHandler : MonoBehaviour
 		SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
 
 		GameData.MainMenuCanvas.gameObject.SetActive(false);
-		//PlayerData.UponRestart();
+		UponRestart();
 	}
 
 	public void OnBackToMenu()
 	{
 		SceneManager.UnloadSceneAsync("Gameplay");
 		GameData.MainMenuCanvas.gameObject.SetActive(true);
+		UponRestart();
 		Debug.Log("... Restart");
 	}
 
