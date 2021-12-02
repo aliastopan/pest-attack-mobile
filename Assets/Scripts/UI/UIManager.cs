@@ -94,7 +94,7 @@ public class UIManager : MonoBehaviour
 
     public void ClosePauseScreen()
     {
-        ShopScreen.SetActive(false);
+        PauseSceen.SetActive(false);
         ResumeGame();
     }
 
@@ -113,6 +113,7 @@ public class UIManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
+        Debug.Log("PAUSE CALLED");
     }
 
     public void ResumeGame()
