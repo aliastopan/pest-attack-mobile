@@ -15,11 +15,28 @@ public class SceneHandler : MonoBehaviour
 	}
 	private void Update() 
 	{
-		BGMSource.mute = GameData.IsMute;	
+		BGMSource.mute = GameData.IsMute;
+		ForceRestart();
+
+		if(!GameData.IsPlaying){
+			// set canvas back to true
+		}
+	}
+
+	private void ForceRestart()
+	{
+		if(GameData.IsPlaying && SceneManager.sceneCount == 1)
+		{
+			Debug.Log("Force Restart");
+			SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
+			GameData.MainMenuCanvas.gameObject.SetActive(false);
+			UponRestart();
+		}
 	}
 
 	public void OnLoadStage()
 	{
+		GameData.IsPlaying = true;
 		SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
 
 		GameData.MainMenuCanvas.gameObject.SetActive(false);

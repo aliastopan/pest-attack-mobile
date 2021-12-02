@@ -28,10 +28,6 @@ public class UIManager : MonoBehaviour
     public Text RankUlarText;
 
 
-
-    
-    
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -128,5 +124,28 @@ public class UIManager : MonoBehaviour
         PlayerData.UponRestart(); 
         SceneManager.LoadScene("Gameplay");
 	}
+
+    public void ProperRestart()
+	{
+        GameOverScreen.SetActive(false);
+        Time.timeScale = 1;
+        PlayerData.UponRestart();
+        GameData.UponRestart();
+		SceneManager.UnloadSceneAsync("Gameplay");
+        // SceneManager.LoadScene("Gameplay", LoadSceneMode.Additive);
+
+	}
+
+    public void OnBackToMenu()
+	{
+        GameData.IsPlaying = false;
+		GameData.UponRestart();
+        PlayerData.UponRestart();
+		GameData.MainMenuCanvas.gameObject.SetActive(true);
+    	SceneManager.UnloadSceneAsync("Gameplay");
+		// Debug.Log("... Restart");
+	}
+
+    
 
 }

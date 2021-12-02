@@ -14,6 +14,7 @@ public enum CardType
 
 public static class GameData
 {
+  public static bool IsPlaying = false;
   public static Canvas MainMenuCanvas;
   public static bool IsMute = false;
   public static readonly int[] MAX_ENEMY_SPAWN = new int[] {7, 15, 17, 22, 25};

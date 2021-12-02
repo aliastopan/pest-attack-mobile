@@ -139,9 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoint: 100
-  AttackPoint: 100
+  AttackPoint: 5000
   AttackCooldown: 2
-  MovementSpeed: 0.5
+  MovementSpeed: 2
   SpeedFactor: 1
   IsBattle: 0
   Target: {fileID: 0}
