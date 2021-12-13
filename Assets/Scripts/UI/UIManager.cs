@@ -140,6 +140,7 @@ public class UIManager : MonoBehaviour
 	{
         GameData.IsPlaying = false;
 		GameData.UponRestart();
+        Time.timeScale = 1;
         PlayerData.UponRestart();
 		GameData.MainMenuCanvas.gameObject.SetActive(true);
     	SceneManager.UnloadSceneAsync("Gameplay");
