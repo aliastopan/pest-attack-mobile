@@ -71,7 +71,7 @@ public class Trap : MonoBehaviour
 
     public void BeingDamaged()
     {
-        Debug.LogWarning($"Damage Sequence.");
+        // Debug.LogWarning($"Damage Sequence.");
         hitSequence.tReset();
         hitSequence.Start();
     }
@@ -81,7 +81,7 @@ public class Trap : MonoBehaviour
     {
         if (HealthPoint <= 0)
         {
-            Debug.Log($"{this.gameObject.name} is DEAD.");
+            // Debug.Log($"{this.gameObject.name} is DEAD.");
             if(this.gameObject.tag == "Padi")
             {
                 PlayerData.LifePoint--;    

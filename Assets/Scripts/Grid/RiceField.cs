@@ -20,7 +20,7 @@ public class RiceField : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) 
     {    
-        Debug.LogWarning($"Hit");
+        // Debug.LogWarning($"Hit");
         if(collision.gameObject.tag == "Enemy")
             EnemyCounter++;
     }

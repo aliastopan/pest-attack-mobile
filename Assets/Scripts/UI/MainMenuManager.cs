@@ -33,7 +33,7 @@ public class MainMenuManager : MonoBehaviour
     private void Update() 
     {
         Level.sprite = Levels[GameData.SELECTED_STAGE];
-        Debug.Log($"Stage Lv: {GameData.SELECTED_STAGE + 1}");
+        // Debug.Log($"Stage Lv: {GameData.SELECTED_STAGE + 1}");
         LevelRewardText.text = $"{GameData.WIN_REWARD[GameData.SELECTED_STAGE]}";
 
     }

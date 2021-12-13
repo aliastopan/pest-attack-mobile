@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
         //RankUlarText.text = $"Rank {GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]}";   
 
 
-        Debug.LogWarning($"Enemy Killed: {PlayerData.CurrentEnemyKilled}/{GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
+        // Debug.LogWarning($"Enemy Killed: {PlayerData.CurrentEnemyKilled}/{GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE]}");
         if(PlayerData.CurrentEnemyKilled == GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE])
         {
             //Debug.Log($"WIN");

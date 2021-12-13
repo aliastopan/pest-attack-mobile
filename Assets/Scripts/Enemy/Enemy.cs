@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour
                     Trap targetTrap = Target.GetComponent<Trap>();
                     targetTrap.HealthPoint -= AttackPoint;
                     targetTrap.BeingDamaged();
-                    Debug.LogWarning($"Battle");
+                    // Debug.LogWarning($"Battle");
                 //}
             }
         }
