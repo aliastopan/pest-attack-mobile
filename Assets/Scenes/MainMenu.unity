@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &142528678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1411,7 +1411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &451089966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1533,10 +1533,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 640, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1759,7 +1759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &753401529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4696,11 +4696,10 @@ MonoBehaviour:
   CollectionText: {fileID: 681132029}
   Collections:
   - {fileID: 11400000, guid: 84e8cfb4adf799041a201801c04abc44, type: 2}
-  - {fileID: 11400000, guid: 02bfcf72892d6c047875d023d8104d9e, type: 2}
-  - {fileID: 11400000, guid: 34dbd2c141e57ce4da7a830b2a932eeb, type: 2}
+  - {fileID: 11400000, guid: 15ac220698eb0c744874207eb9c4356c, type: 2}
   - {fileID: 11400000, guid: c64e680d6cb2f434a8a859127ff63113, type: 2}
   - {fileID: 11400000, guid: 1bb52eae9f04983439f7bb0d97a43591, type: 2}
-  - {fileID: 11400000, guid: 15ac220698eb0c744874207eb9c4356c, type: 2}
+  - {fileID: 11400000, guid: 42dbbe8a252a4cd4dacb20d36a19bee1, type: 2}
   CollectionIndex: 0
 --- !u!1 &1868429308
 GameObject:

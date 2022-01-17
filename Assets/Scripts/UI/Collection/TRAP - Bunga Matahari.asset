@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: TRAP - Bunga Matahari
   m_EditorClassIdentifier: 
   Illustration: {fileID: 21300000, guid: d517300a547e45e47aa4dd5905c1b746, type: 3}
-  Description: ' -'
+  Description: Bunga ini dapat menghalau hama burung pipit, karena pada umumnya burung
+    pipit tidak menyukai warna yan mencolok seperti warna kuning. Dengan menanam
+    Bunga ini burung akan enggan mendekat.
