@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
     {
         if(HealthPoint <= 0)
         {
-            Debug.Log($"{this.gameObject.name} is DEAD.");
+            // Debug.Log($"{this.gameObject.name} is DEAD.");
             PlayerData.CurrentEnemyKilled++;
             this.gameObject.GetComponent<Collider2D>().enabled = false;
             Destroy(this.gameObject);

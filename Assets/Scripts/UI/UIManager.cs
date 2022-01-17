@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviour
     public Text lifePointText;
 	public static int collectable;
     public static int lifePoint;
+    private bool isRewarded = false;
+
 
 
     [Header("Shop Element")]
@@ -31,6 +33,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        isRewarded = false;
         collectable = 0;
         lifePoint = 0;
 
@@ -68,9 +71,28 @@ public class UIManager : MonoBehaviour
 
     }
 
+    // MAX_ENEMY_SPAWN
+    // ENEMY_KILLED
     public void GameWin()
     {
-        PlayerData.CurrentStarPoint += GameData.WIN_REWARD[GameData.SELECTED_STAGE];        
+        int maxEnemy = GameData.MAX_ENEMY_SPAWN[GameData.SELECTED_STAGE];
+        int enemyKilled = GameData.ENEMY_KILLED;
+       
+        Debug.LogWarning($"IS WIN: {!isRewarded}");
+
+        if(!isRewarded)
+        {
+            isRewarded = true;
+            int reward = GameData.WIN_REWARD[GameData.SELECTED_STAGE];
+            
+            Debug.LogWarning($"CURRENT: {PlayerData.CurrentStarPoint}");
+            Debug.LogWarning($"REWARD: {reward}");
+            PlayerData.CurrentStarPoint += GameData.WIN_REWARD[GameData.SELECTED_STAGE];        
+            Debug.LogWarning($"ADDED REWARD: {PlayerData.CurrentStarPoint}");
+        }
+
+
+        
         PauseGame();
         WinScreen.SetActive(true);
     }
@@ -109,7 +131,7 @@ public class UIManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        Debug.Log("PAUSE CALLED");
+        // Debug.Log("PAUSE CALLED");
     }
 
     public void ResumeGame()
