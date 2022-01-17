@@ -30,31 +30,42 @@ public class Shop : MonoBehaviour
         if(GameData.TrapRank[1] < 3) 
             GameData.TrapRank[1]++;
 
-
         //if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]] < 3)
         //    GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]++;
     }
 
     public void UpgradeBungaMatahari()
     {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]]++;
+        if(GameData.TrapRank[2] < 3) 
+            GameData.TrapRank[2]++;
+
+        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]] < 3)
+        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]]++;
     }
 
     public void UpgradeBebek()
     {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]]++;
+        if(GameData.TrapRank[3] < 3) 
+            GameData.TrapRank[3]++;
+
+        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]] < 3)
+        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]]++;
     }
 
     public void UpgradeBurungHantu()
     {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]]++;
+        if(GameData.TrapRank[4] < 3) 
+            GameData.TrapRank[4]++;
+
+        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]] < 3)
+        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]]++;
     }
     public void UpgradeUlar()
     {
-        if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]] < 3)
-            GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]++;
+        if(GameData.TrapRank[5] < 3) 
+            GameData.TrapRank[5]++;
+
+        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]] < 3)
+        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]++;
     }
 }

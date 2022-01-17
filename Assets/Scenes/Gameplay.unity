@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded662e5180c796408c3f2748f2068c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeckSlot: 00000000010000000200000003000000040000000500000006000000
+  DeckSlot: 000000000100000002000000030000000400000005000000
   DefaultColor: {r: 1, g: 1, b: 1, a: 0}
   ToDropColor: {r: 1, g: 0.3160377, b: 0.3160377, a: 1}
   BounceCurve:

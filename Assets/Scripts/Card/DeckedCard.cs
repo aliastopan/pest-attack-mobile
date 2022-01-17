@@ -27,7 +27,7 @@ public class DeckedCard : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoi
         if(PlayerData.AvailableGrids < 0)
             PlayerData.AvailableGrids = 0;    
 
-       OnUpgrade();            
+    //    OnUpgrade();            
     }
 
     public void OnUpgrade()
