@@ -30,13 +30,13 @@ public class Shop : MonoBehaviour
     {   
         int index = 1;
         int currentRank = GameData.TrapRank[index];
-        if(currentRank == 3)
+        if(currentRank == GameData.UPGRADE_LIMIT)
             return;
         
         int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
         Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < GameData.UPGRADE_LIMIT && PlayerData.CurrentStarPoint >= upgradeCost)
         {
             GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
@@ -47,13 +47,13 @@ public class Shop : MonoBehaviour
     {
         int index = 2;
         int currentRank = GameData.TrapRank[index];
-        if(currentRank == 3)
+        if(currentRank == GameData.UPGRADE_LIMIT)
             return;
         
         int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
         Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < GameData.UPGRADE_LIMIT && PlayerData.CurrentStarPoint >= upgradeCost)
         {
             GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
@@ -64,13 +64,13 @@ public class Shop : MonoBehaviour
     {
         int index = 3;
         int currentRank = GameData.TrapRank[index];
-        if(currentRank == 3)
+        if(currentRank == GameData.UPGRADE_LIMIT)
             return;
         
         int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
         Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < GameData.UPGRADE_LIMIT && PlayerData.CurrentStarPoint >= upgradeCost)
         {
             GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
@@ -82,13 +82,13 @@ public class Shop : MonoBehaviour
     {
         int index = 4;
         int currentRank = GameData.TrapRank[index];
-        if(currentRank == 3)
+        if(currentRank == GameData.UPGRADE_LIMIT)
             return;
         
         int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
         Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < GameData.UPGRADE_LIMIT && PlayerData.CurrentStarPoint >= upgradeCost)
         {
             GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
@@ -99,16 +99,17 @@ public class Shop : MonoBehaviour
     {
         int index = 5;
         int currentRank = GameData.TrapRank[index];
-        if(currentRank == 3)
+        if(currentRank == GameData.UPGRADE_LIMIT)
             return;
         
         int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
         Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < GameData.UPGRADE_LIMIT && PlayerData.CurrentStarPoint >= upgradeCost)
         {
-            GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
+            GameData.TrapRank[index]++;
+            Debug.LogWarning($"UPGRADE: {GameData.TrapRank[index]-1}, {GameData.TrapRank[index]}");
         } 
 
     }

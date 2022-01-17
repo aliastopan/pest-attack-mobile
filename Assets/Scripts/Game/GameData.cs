@@ -23,6 +23,8 @@ public static class GameData
   public static int SELECTED_STAGE = 0;
   public static int ENEMY_KILLED = 0;
 
+  public static int UPGRADE_LIMIT = 3;
+
   
 
   public static void UponRestart()
