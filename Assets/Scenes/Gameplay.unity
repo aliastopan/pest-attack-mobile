@@ -7666,7 +7666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardType: 4
+  CardType: 3
   CardRank:
   - {fileID: 21300000, guid: 2ec530cae2f90554f94c040951da5a01, type: 3}
   - {fileID: 21300000, guid: 258039be04604da4e945df64d48abed5, type: 3}
@@ -8549,7 +8549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardType: 5
+  CardType: 4
   CardRank:
   - {fileID: 21300000, guid: 08d6045ed5330ae4c8e147d427874f9a, type: 3}
   - {fileID: 21300000, guid: 0e20c87fb9260b14b8d0847a679eab53, type: 3}
@@ -9734,7 +9734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20b4181424627140b520f60b64bb6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardType: 6
+  CardType: 5
   CardRank:
   - {fileID: 21300000, guid: 73eb7543f705b29419284b883f0c7384, type: 3}
   - {fileID: 21300000, guid: fc19bb6046a7b5b40a7967adc9131cdf, type: 3}
