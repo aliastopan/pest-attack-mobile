@@ -18,7 +18,8 @@ public class Shop : MonoBehaviour
             {
                 int currentRank = GameData.TrapRank[i+1] - 1;
                 int upgradeCost = TrapStats[i].StatsByRank[currentRank].UpgradeCost;
-                string cost =   upgradeCost == 0 ? $"MAX" : $"{upgradeCost}";
+                // string cost =   upgradeCost == 0 ? $"MAX" : $"{upgradeCost}";
+                string cost = GameData.TrapRank[i+1] >= 3 ? $"MAX" : $"{upgradeCost}";
                 string display = $"Rank: {GameData.TrapRank[i+1].ToString()} / ";
                 TrapRank[i].text = display + cost;
             }
@@ -27,75 +28,88 @@ public class Shop : MonoBehaviour
 
     public void UpgradeAirSabun()
     {   
-        int currentRank = GameData.TrapRank[1];
-        int upgradeCost = TrapStats[0].StatsByRank[currentRank].UpgradeCost;
+        int index = 1;
+        int currentRank = GameData.TrapRank[index];
+        if(currentRank == 3)
+            return;
+        
+        int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
+        Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(GameData.TrapRank[1] < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
         {
-            GameData.TrapRank[1]++;
+            GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
         } 
-
-        //if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]] < 3)
-        //    GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.AirSabun]]++;
     }
 
     public void UpgradeBungaMatahari()
     {
-        int currentRank = GameData.TrapRank[2];
-        int upgradeCost = TrapStats[1].StatsByRank[currentRank].UpgradeCost;
+        int index = 2;
+        int currentRank = GameData.TrapRank[index];
+        if(currentRank == 3)
+            return;
+        
+        int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
+        Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(GameData.TrapRank[2] < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
         {
-            GameData.TrapRank[2]++;
+            GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
         } 
-
-        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]] < 3)
-        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BungaMatahari]]++;
     }
 
     public void UpgradeBebek()
     {
-        int currentRank = GameData.TrapRank[3];
-        int upgradeCost = TrapStats[2].StatsByRank[currentRank].UpgradeCost;
+        int index = 3;
+        int currentRank = GameData.TrapRank[index];
+        if(currentRank == 3)
+            return;
+        
+        int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
+        Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(GameData.TrapRank[3] < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
         {
-            GameData.TrapRank[3]++;
+            GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
         } 
 
-        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]] < 3)
-        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Bebek]]++;
     }
 
     public void UpgradeBurungHantu()
     {
-        int currentRank = GameData.TrapRank[4];
-        int upgradeCost = TrapStats[3].StatsByRank[currentRank].UpgradeCost;
+        int index = 4;
+        int currentRank = GameData.TrapRank[index];
+        if(currentRank == 3)
+            return;
+        
+        int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
+        Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(GameData.TrapRank[4] < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
         {
-            GameData.TrapRank[4]++;
+            GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
         } 
 
-        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]] < 3)
-        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.BurungHantu]]++;
     }
     public void UpgradeUlar()
     {
-                int currentRank = GameData.TrapRank[5];
-        int upgradeCost = TrapStats[4].StatsByRank[currentRank].UpgradeCost;
+        int index = 5;
+        int currentRank = GameData.TrapRank[index];
+        if(currentRank == 3)
+            return;
+        
+        int upgradeCost = TrapStats[index-1].StatsByRank[currentRank].UpgradeCost;
+        Debug.Log($"rank: {currentRank}, cost: {upgradeCost}");
 
-        if(GameData.TrapRank[5] < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
+        if(currentRank < 3 && PlayerData.CurrentStarPoint >= upgradeCost)
         {
-            GameData.TrapRank[5]++;
+            GameData.TrapRank[index]++;
             PlayerData.CurrentStarPoint -= upgradeCost;
         } 
 
-        // if(GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]] < 3)
-        //     GameData.TrapRank[(int)ObjectMaster.Instance.DeckSlot[(int)CardType.Ular]]++;
     }
 }

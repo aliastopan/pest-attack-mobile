@@ -7,7 +7,7 @@ public static class PlayerData
     public static int AvailableGrids = 0;
     public static int LifePoint = 3;
     public static int CurrentTaelPoint = 100;
-    public static int CurrentStarPoint = 50;
+    public static int CurrentStarPoint = 250;
     public static int SelectedStage = 1;
 
     public static int CurrentEnemyKilled = 0;
