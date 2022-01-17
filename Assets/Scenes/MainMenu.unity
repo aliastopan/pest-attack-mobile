@@ -3253,14 +3253,14 @@ MonoBehaviour:
   TrapRank:
   - {fileID: 420908390}
   - {fileID: 1844446763}
-  - {fileID: 2106894317}
   - {fileID: 327844971}
+  - {fileID: 2106894317}
   - {fileID: 1542398844}
   TrapStats:
   - {fileID: 11400000, guid: ee07dfacd8cd993419e1b77fa9a4ab0f, type: 2}
   - {fileID: 11400000, guid: 8ae85b87c7e24454c9b4c35d91beeaab, type: 2}
-  - {fileID: 11400000, guid: 3a85800dd8e49ab47a8fe47160ac496f, type: 2}
   - {fileID: 11400000, guid: 651a8f9652ecf2440b2a66fdabc6b5d8, type: 2}
+  - {fileID: 11400000, guid: 3a85800dd8e49ab47a8fe47160ac496f, type: 2}
   - {fileID: 11400000, guid: 375b855f3ff9d674fb346b0a62b9daf6, type: 2}
 --- !u!1 &1258268228
 GameObject:
