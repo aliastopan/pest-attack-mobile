@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(SpawnTimeFactor);
         //Debug.Log($"Spawn");
 
-        int rngEnemies = new System.Random().Next(0, GameData.SELECTED_STAGE);
+        int rngEnemies = new System.Random().Next(0, GameData.SELECTED_STAGE+1);
         int rngSpawnPoint = new System.Random().Next(0, 4);
 
           //Debug.Log($"Spawn: {rngSpawn}, Enemy Number: {spawnCounter + 1}");
